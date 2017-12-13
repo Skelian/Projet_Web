@@ -1,0 +1,19 @@
+Ajout de modif :
+
+	git add .
+
+	git commit -m "ton message"
+
+	git push
+
+
+
+Mettre a jour
+
+	git pull 
+
+
+cloner un projet 
+
+
+	git clone <url>
