@@ -38,10 +38,29 @@
     </nav>
 
     <div id="contenue">
-        <h1>Gouter Rugby</h1>
+        <?php
+            require_once("../modeles/bd.php");
+            $bd=new Bd();
+            $bd->connexion();
+            $co=$bd->getCo();
+            $requete="SELECT  `personne`.`prenomPersonne` as prenom, `personne`.`nomPersonne` as nom FROM `enfant`, `personne` 
+                      WHERE `enfant`.`numPersonne`=`personne`.`numPersonne` ORDER BY `enfant`.`numCategorie`";
+            $resultat=mysqli_query($co,$requete) or die("erreur de requete liste enfant");
 
-        <!--le planning des prochains gouter ou annonces -->
-        Planning des goûters à venir:
+        ?>
+        <h1>Gouter Rugby</h1>
+        <form method="post" action=" ../traitements/modif_num.php">
+            <div id="liste_enfant">
+
+            </div>
+
+            <div id="liste_Produit" >
+
+            </div>
+
+            <button type="submit">Confirmer</button>
+        </form>
+
     </div>
 </body>
 </html>

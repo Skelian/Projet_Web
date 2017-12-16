@@ -10,6 +10,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </head>
 <body>
+<?php
+require_once("../modeles/benevole.php");
+session_start();
+?>
 <!-- Menu -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"><img src="../images/logo.png" alt="logo apero" class="img-thumbnail img-logo"></a>
@@ -38,10 +42,81 @@
 </nav>
 
 <div id="contenue">
-    <h1>Gouter Rugby</h1>
+    <?php
+        if(!isset($_SESSION['benevole'])) {
+            ?><h1>Connexion</h1>
+                    
+                    Veuillez renseigner tous les champs :
+                    <form method="post" action=" ../traitements/connexion.php">
+                        <p>
+                            <label for="identifiant">Utilisateur :</label>
+                            <br>
+                            <input type="text"  name="identifiant">
+                        </p>
+                        <p>
+                            <label for="mdp">Mot de passe:</label>
+                            <br>
+                            <input type="password"  name="mdp">
+                        </p>
+                        <button type="submit">Se connecter</button>
+                    </form>
+        <?php
+        }else{
+            $benevole= $_SESSION["benevole"];
+            $prenom=$benevole->getPrenom();
+            $nom=$benevole->getNom();
+            $identifiant=$benevole->getIdentifiant();
+            $mail=$benevole->getEmail();
+            $tel=$benevole->getTelephone();
+        ?>
+            <h1> Mes infos</h1>
 
-    <!--le planning des prochains gouter ou annonces -->
-    Ici la page de connexion au site ou l'utilisateur et rediriger si il n'est pas connecter depuis une autre page du site
+            <p>Bonjour <?php echo $prenom.' '.$nom; ?></p>
+            <form method="post" action=" ../traitements/modif_login.php">
+                <p>
+                    Nom d'utilisateur actuel :<?php echo $identifiant ?>.<br>
+                    <label for="identifiant">Nouveau identifiant :</label>
+                    <input type="text"  name="identifiant">
+                    <button type="submit">Modifier</button>
+                 </p>
+
+                <form method="post" action=" ../traitements/modif_mail.php">
+                    <p>
+                        Adresse Mail actuel : <?php echo $mail?>.<br>
+                        <label for="mail">Nouvelle adresse mail :</label>
+                        <input type="text"  name="mail">
+                        <button type="submit">Modifier</button>
+                    </p>
+                </form>
+
+                <form method="post" action=" ../traitements/modif_num.php">
+                    <p>
+                        Numero de telephone actuel : <?php echo $tel?>.<br>
+                        <label for="mail">Nouveau telephone :</label>
+                        <input type="text"  name="mail">
+                        <button type="submit">Modifier</button>
+                    </p>
+                </form>
+                <form method="post" action=" ../traitements/modif_num.php">
+                    <p>
+                        Changer votre mot de passe : <br>
+                        <label for="mdp">Nouveau mot de passe :</label> <br>
+                        <input type="text"  name="mdp"> <br>
+                        <label for="mdp">Confirmer votre nouveau mot de passe :</label> <br>
+                        <input type="text"  name="mdpConfirmation">
+                        <button type="submit">Modifier</button>
+                    </p>
+                </form>
+
+                <form method="post" action=" ../traitements/deconnexion.php">
+                    <p>
+                        <button style="position: relative; left: 70%;" type="submit">Se deconnecter</button>
+                    </p>
+                </form>
+
+        <?php
+        }
+        ?>
 </div>
 </body>
 </html>

@@ -25,13 +25,13 @@
                     <a class="nav-link" href="./pages/gouter.php">Gouter</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Produit</a>
+                    <a class="nav-link" href="./pages/produit.php">Produit</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Utilisateur </a>
+                    <a class="nav-link " href="./pages/utilisateur.php">Utilisateur </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link "  href="#">Connexion </a>
+                    <a class="nav-link "  href="./pages/connexion.php">Connexion </a>
                 </li>
             </ul>
         </div>
