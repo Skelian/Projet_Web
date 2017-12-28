@@ -25,24 +25,25 @@
                     <a class="nav-link" href="./pages/gouter.php">Gouter</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Produit</a>
+                    <a class="nav-link" href="./pages/produit.php">Produit</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Utilisateur </a>
+                    <a class="nav-link " href="./pages/utilisateur.php">Utilisateur </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link "  href="#">Connexion </a>
+                    <a class="nav-link "  href="./pages/connexion.php">Connexion </a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div id="contenue">
-         <h1>Accueil</h1>
+        <div id="contenue">
+             <h1>Accueil</h1>
 
-        <!--le planning des prochains gouter ou annonces -->
-        Bienvenue sur le site de gestion des gouter de l'APERO. <br>
-        Planning des goûters à venir:
-    </div>
+            <!--le planning des prochains gouter ou annonces -->
+            Bienvenue sur le site de gestion des gouter de l'APERO. <br>
+            Planning des goûters à venir:
+        </div>
+
 </body>
 </html>

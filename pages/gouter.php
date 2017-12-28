@@ -38,10 +38,55 @@
     </nav>
 
     <div id="contenue">
+        <?php
+            require_once("../modeles/bd.php");
+            $bd=new Bd();
+            $bd->connexion();
+            $co=$bd->getCo();
+            $requete="SELECT  `numEnfant` as id,`personne`.`prenomPersonne` as prenom, `personne`.`nomPersonne` as nom FROM `enfant`, `personne` 
+                      WHERE `enfant`.`numPersonne`=`personne`.`numPersonne` ORDER BY `enfant`.`numCategorie`";
+            $resultatEnfant=mysqli_query($co,$requete) or die("erreur de requete liste enfant");
+            $requete="SELECT `numProduit`,`nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit` WHERE `quantiteProduit`>0 ";
+            $resultatProduit=mysqli_query($co,$requete) or die("erreur de requete liste produit");
+        ?>
         <h1>Gouter Rugby</h1>
 
-        <!--le planning des prochains gouter ou annonces -->
-        Planning des goûters à venir:
+        <form method="post" action=" ../traitements/gouter_recap.php">
+            <div>
+            <div id="form_gouter">
+                <div id="liste_Enfant">
+                    <label for="listeEnfant"> Liste des Enfants</label>
+                    <div id="cadre_liste_enfant">
+                        <?php
+                         while($row=mysqli_fetch_assoc($resultatEnfant)){
+                             ?>
+                                 <input type= "radio" name="listeEnfant" value="<?php echo $row['id'] ; ?>">  <?php echo $row['prenom'].' '.$row['nom'] ; ?><br>
+                             <?php
+                         }
+                        ?>
+                    </div>
+                </div>
+                <div id="liste_Produit">
+                    <label for="listeProduit">Liste des Produits</label>
+                    <div id="cadre_liste_Produit">
+                        <table>
+                            <tr> <th>Nom</th> <th>Prix/u</th> <th>en stock</th> <th>Qte acheter</th> </tr>
+                        <?php
+                        while($row=mysqli_fetch_assoc($resultatProduit)){
+                            ?>
+                                 <tr> <td><?php echo $row['nomProduit'] ; ?></td> <td><?php echo $row['prixProduit'] ; ?>€</td>  <td><?php echo $row['quantiteProduit'] ; ?></td> <td><input type="number" name="produit_<?php echo $row['numProduit'] ; ?>" min="0" max="5"></td> </tr>
+                            <?php
+                        }
+                        ?>
+                        </table>
+                     </div>
+                </div>
+            </div>
+            </div>
+                <input type="submit" value="Confirmer">
+                <input type="reset">
+
+        </form>
     </div>
 
 </body>
