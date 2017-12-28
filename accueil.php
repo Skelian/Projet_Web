@@ -37,12 +37,13 @@
         </div>
     </nav>
 
-    <div id="contenue">
-         <h1>Accueil</h1>
+        <div id="contenue">
+             <h1>Accueil</h1>
 
-        <!--le planning des prochains gouter ou annonces -->
-        Bienvenue sur le site de gestion des gouter de l'APERO. <br>
-        Planning des goûters à venir:
-    </div>
+            <!--le planning des prochains gouter ou annonces -->
+            Bienvenue sur le site de gestion des gouter de l'APERO. <br>
+            Planning des goûters à venir:
+        </div>
+
 </body>
 </html>

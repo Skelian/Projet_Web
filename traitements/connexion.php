@@ -13,7 +13,6 @@
     $requete = "SELECT `loginBenevole`, `mdpBenevole`,`numPersonne` FROM `benevole`WHERE `mdpBenevole`='$mdp' AND `loginBenevole`='$identifiant'";
     $resultat=mysqli_query($co,$requete) or die("erreur de connexion");
     if(mysqli_num_rows($resultat)>0){
-        echo "1";
         $benevole= new Benevole($co,$identifiant,$mdp);
         $benevole->connexion();
         mysqli_close($co);
