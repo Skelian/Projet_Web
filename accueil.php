@@ -12,7 +12,7 @@
 <body>
     <!-- Menu -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo apero" class="img-thumbnail img-logo"></a>
+        <a class="navbar-brand" href="accueil.php"><img src="images/logo.png" alt="logo apero" class="img-thumbnail img-logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
