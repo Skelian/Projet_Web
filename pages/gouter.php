@@ -12,7 +12,7 @@
 <body>
     <!-- Menu -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><img src="../images/logo.png" alt="logo apero" class="img-thumbnail img-logo"></a>
+        <a class="navbar-brand" href="../accueil.php"><img src="../images/logo.png" alt="logo apero" class="img-thumbnail img-logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,7 +37,7 @@
         </div>
     </nav>
 
-    <div id="contenue">
+    <div id="contenue" style="height: 70%;">
         <?php
             require_once("../modeles/bd.php");
             $bd=new Bd();
@@ -48,31 +48,35 @@
             $resultatEnfant=mysqli_query($co,$requete) or die("erreur de requete liste enfant");
             $requete="SELECT `numProduit`,`nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit` WHERE `quantiteProduit`>0 ";
             $resultatProduit=mysqli_query($co,$requete) or die("erreur de requete liste produit");
+            $tabProduit=array();
         ?>
         <h1>Gouter Rugby</h1>
 
-        <form method="post" action=" ../traitements/gouter_recap.php">
-            <div>
+        <form method="post" action=" ../traitements/gouter_recap.php" style="height: 100%;">
+
             <div id="form_gouter">
                 <div id="liste_Enfant">
                     <label for="listeEnfant"> Liste des Enfants</label>
                     <div id="cadre_liste_enfant">
+                        <table  class="table table-striped">
                         <?php
                          while($row=mysqli_fetch_assoc($resultatEnfant)){
                              ?>
-                                 <input type= "radio" name="listeEnfant" value="<?php echo $row['id'] ; ?>">  <?php echo $row['prenom'].' '.$row['nom'] ; ?><br>
+                            <tr> <td><input type= "radio" name="listeEnfant" value="<?php echo $row['id'] ; ?>">  <?php echo $row['prenom'].' '.$row['nom'] ; ?></td>
                              <?php
                          }
                         ?>
+                         </table>
                     </div>
                 </div>
                 <div id="liste_Produit">
                     <label for="listeProduit">Liste des Produits</label>
                     <div id="cadre_liste_Produit">
-                        <table>
-                            <tr> <th>Nom</th> <th>Prix/u</th> <th>en stock</th> <th>Qte acheter</th> </tr>
+                        <table  class="table table-striped">
+                            <tr> <th scope="col" >Nom</th> <th scope="col">Prix/u</th> <th scope="col">en stock</th> <th scope="col" >Qte acheter</th> </tr>
                         <?php
                         while($row=mysqli_fetch_assoc($resultatProduit)){
+                            $tabProduit[]="produit_".$row['numProduit'] ;
                             ?>
                                  <tr> <td><?php echo $row['nomProduit'] ; ?></td> <td><?php echo $row['prixProduit'] ; ?>€</td>  <td><?php echo $row['quantiteProduit'] ; ?></td> <td><input type="number" name="produit_<?php echo $row['numProduit'] ; ?>" min="0" max="5"></td> </tr>
                             <?php
@@ -82,10 +86,11 @@
                      </div>
                 </div>
             </div>
-            </div>
+            <div>
+                <input type="hidden" name="listeProduit" value="<?php $tabProduit?>">
                 <input type="submit" value="Confirmer">
                 <input type="reset">
-
+            </div>
         </form>
     </div>
 
