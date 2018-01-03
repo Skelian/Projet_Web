@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a0894d3-142f-4a46-aa20-81b522302733" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/traitements/gouter_confirm.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/traitements/gouter_recap.php" afterPath="$PROJECT_DIR$/traitements/gouter_recap.php" />
+      <change beforePath="$PROJECT_DIR$/pages/gouter.php" afterPath="$PROJECT_DIR$/pages/gouter.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,15 +25,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gouter.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gouter.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/gouter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="46" selection-end-column="110" />
+            <state relative-caret-position="348">
+              <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
               <folding>
-                <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
-                <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
-                <marker date="1514975878234" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
+                <marker date="1514999681789" expanded="true" signature="2605:2841" ph="SELECT `pers... enfant" />
+                <marker date="1514999681789" expanded="true" signature="2968:3047" ph="SELECT `numP... produit" />
+                <marker date="1514999681789" expanded="true" signature="2968:3073" ph="SELECT `numP... produit" />
               </folding>
             </state>
           </provider>
@@ -56,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gouter_confirm.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gouter_confirm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/traitements/gouter_confirm.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
@@ -87,8 +85,8 @@
       <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+            <state relative-caret-position="51">
+              <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -109,8 +107,8 @@
       <file leaf-file-name="produit.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/produit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="48" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+            <state relative-caret-position="136">
+              <caret line="8" column="66" lean-forward="true" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -195,9 +193,9 @@
         <option value="$PROJECT_DIR$/pages/produit.php" />
         <option value="$PROJECT_DIR$/pages/utilisateur.php" />
         <option value="$PROJECT_DIR$/styles/css/style.css" />
-        <option value="$PROJECT_DIR$/pages/gouter.php" />
         <option value="$PROJECT_DIR$/traitements/gouter_recap.php" />
         <option value="$PROJECT_DIR$/traitements/gouter_confirm.php" />
+        <option value="$PROJECT_DIR$/pages/gouter.php" />
       </list>
     </option>
   </component>
@@ -327,12 +325,12 @@
       <workItem from="1514480844413" duration="1089000" />
       <workItem from="1514536639334" duration="12099000" />
       <workItem from="1514627539017" duration="4974000" />
-      <workItem from="1514745014621" duration="20681000" />
+      <workItem from="1514745014621" duration="21449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112843000" />
+    <option name="totallyTimeSpent" value="113611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -401,9 +399,9 @@
         <state relative-caret-position="816">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
-            <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
-            <marker date="1514975878234" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
+            <marker date="1514999681789" expanded="true" signature="2605:2841" ph="SELECT `pers... enfant" />
+            <marker date="1514999681789" expanded="true" signature="2968:3047" ph="SELECT `numP... produit" />
+            <marker date="1514999681789" expanded="true" signature="2968:3073" ph="SELECT `numP... produit" />
           </folding>
         </state>
       </provider>
@@ -449,9 +447,9 @@
         <state relative-caret-position="408">
           <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
           <folding>
-            <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
-            <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
-            <marker date="1514975878234" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
+            <marker date="1514999681789" expanded="true" signature="2605:2841" ph="SELECT `pers... enfant" />
+            <marker date="1514999681789" expanded="true" signature="2968:3047" ph="SELECT `numP... produit" />
+            <marker date="1514999681789" expanded="true" signature="2968:3073" ph="SELECT `numP... produit" />
           </folding>
         </state>
       </provider>
@@ -512,9 +510,9 @@
         <state relative-caret-position="408">
           <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
           <folding>
-            <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
-            <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
-            <marker date="1514975878234" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
+            <marker date="1514999681789" expanded="true" signature="2605:2841" ph="SELECT `pers... enfant" />
+            <marker date="1514999681789" expanded="true" signature="2968:3047" ph="SELECT `numP... produit" />
+            <marker date="1514999681789" expanded="true" signature="2968:3073" ph="SELECT `numP... produit" />
           </folding>
         </state>
       </provider>
@@ -670,14 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/produit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="48" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/utilisateur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -686,41 +676,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/traitements/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="78" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="78" />
-          <folding>
-            <marker date="1514305531443" expanded="true" signature="380:508" ph="SELECT `logi... benevole" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
           <caret line="6897" column="1" lean-forward="false" selection-start-line="6897" selection-start-column="1" selection-end-line="6897" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/gouter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="46" selection-end-column="110" />
-          <folding>
-            <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
-            <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
-            <marker date="1514975878234" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -749,6 +709,44 @@
             <marker date="1514986682750" expanded="true" signature="3657:4593" ph="UPDATE `produit`... " />
             <marker date="1514986682750" expanded="true" signature="3908:4000" ph="INSERT INTO `transaction`... " />
             <marker date="1514986682750" expanded="true" signature="4106:4194" ph="SELECT `pren... compteenfants" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/produit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="66" lean-forward="true" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traitements/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="78" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="78" />
+          <folding>
+            <marker date="1514305531443" expanded="true" signature="380:508" ph="SELECT `logi... benevole" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/gouter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+          <folding>
+            <marker date="1514999681789" expanded="true" signature="2605:2841" ph="SELECT `pers... enfant" />
+            <marker date="1514999681789" expanded="true" signature="2968:3047" ph="SELECT `numP... produit" />
+            <marker date="1514999681789" expanded="true" signature="2968:3073" ph="SELECT `numP... produit" />
           </folding>
         </state>
       </provider>
