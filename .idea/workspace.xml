@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a0894d3-142f-4a46-aa20-81b522302733" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/accueil.php" afterPath="$PROJECT_DIR$/accueil.php" />
-      <change beforePath="$PROJECT_DIR$/pages/utilisateur.php" afterPath="$PROJECT_DIR$/pages/utilisateur.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/traitements/gouter_confirm.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/traitements/gouter_recap.php" afterPath="$PROJECT_DIR$/traitements/gouter_recap.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="gouter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/gouter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="46" column="108" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="46" selection-end-column="108" />
+            <state relative-caret-position="204">
+              <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="46" selection-end-column="110" />
               <folding>
                 <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
                 <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
@@ -40,13 +41,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gouter_recap.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gouter_recap.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/traitements/gouter_recap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="108" column="7" lean-forward="true" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
+            <state relative-caret-position="127">
+              <caret line="93" column="122" lean-forward="false" selection-start-line="93" selection-start-column="100" selection-end-line="93" selection-end-column="122" />
               <folding>
-                <marker date="1514896265274" expanded="true" signature="2834:2939" ph="SELECT `numP... produit" />
+                <marker date="1514984067470" expanded="true" signature="2834:2939" ph="SELECT `numP... produit" />
+                <marker date="1514984067470" expanded="true" signature="3722:3810" ph="SELECT `pren... compteenfants" />
+                <marker date="1514984067470" expanded="true" signature="3722:3811" ph="SELECT `numE... enfant" />
+                <marker date="1514984067470" expanded="true" signature="3722:3819" ph="SELECT `pren... compteenfants" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gouter_confirm.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/traitements/gouter_confirm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="88" column="64" lean-forward="true" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1514986682750" expanded="true" signature="2600:2705" ph="SELECT `numP... produit" />
+                <marker date="1514986682750" expanded="true" signature="3657:3748" ph="UPDATE `produit`... " />
+                <marker date="1514986682750" expanded="true" signature="3657:3759" ph="UPDATE `produit`... " />
+                <marker date="1514986682750" expanded="true" signature="3657:4593" ph="UPDATE `produit`... " />
+                <marker date="1514986682750" expanded="true" signature="3908:4000" ph="INSERT INTO `transaction`... " />
+                <marker date="1514986682750" expanded="true" signature="4106:4194" ph="SELECT `pren... compteenfants" />
               </folding>
             </state>
           </provider>
@@ -175,6 +197,7 @@
         <option value="$PROJECT_DIR$/styles/css/style.css" />
         <option value="$PROJECT_DIR$/pages/gouter.php" />
         <option value="$PROJECT_DIR$/traitements/gouter_recap.php" />
+        <option value="$PROJECT_DIR$/traitements/gouter_confirm.php" />
       </list>
     </option>
   </component>
@@ -304,12 +327,12 @@
       <workItem from="1514480844413" duration="1089000" />
       <workItem from="1514536639334" duration="12099000" />
       <workItem from="1514627539017" duration="4974000" />
-      <workItem from="1514745014621" duration="11689000" />
+      <workItem from="1514745014621" duration="20681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103851000" />
+    <option name="totallyTimeSpent" value="112843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -366,14 +389,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/styles/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accueil.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -699,8 +714,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/gouter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="46" column="108" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="46" selection-end-column="108" />
+        <state relative-caret-position="204">
+          <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="46" selection-end-column="110" />
           <folding>
             <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
             <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
@@ -711,10 +726,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/traitements/gouter_recap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="108" column="7" lean-forward="true" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
+        <state relative-caret-position="127">
+          <caret line="93" column="122" lean-forward="false" selection-start-line="93" selection-start-column="100" selection-end-line="93" selection-end-column="122" />
           <folding>
-            <marker date="1514896265274" expanded="true" signature="2834:2939" ph="SELECT `numP... produit" />
+            <marker date="1514984067470" expanded="true" signature="2834:2939" ph="SELECT `numP... produit" />
+            <marker date="1514984067470" expanded="true" signature="3722:3810" ph="SELECT `pren... compteenfants" />
+            <marker date="1514984067470" expanded="true" signature="3722:3811" ph="SELECT `numE... enfant" />
+            <marker date="1514984067470" expanded="true" signature="3722:3819" ph="SELECT `pren... compteenfants" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traitements/gouter_confirm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="88" column="64" lean-forward="true" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1514986682750" expanded="true" signature="2600:2705" ph="SELECT `numP... produit" />
+            <marker date="1514986682750" expanded="true" signature="3657:3748" ph="UPDATE `produit`... " />
+            <marker date="1514986682750" expanded="true" signature="3657:3759" ph="UPDATE `produit`... " />
+            <marker date="1514986682750" expanded="true" signature="3657:4593" ph="UPDATE `produit`... " />
+            <marker date="1514986682750" expanded="true" signature="3908:4000" ph="INSERT INTO `transaction`... " />
+            <marker date="1514986682750" expanded="true" signature="4106:4194" ph="SELECT `pren... compteenfants" />
           </folding>
         </state>
       </provider>

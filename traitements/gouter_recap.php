@@ -76,6 +76,7 @@
                     $prod+=1;
                 }
             }
+
             if ($prod<1){
                 $err+=1;
             }
@@ -83,7 +84,14 @@
                 header('Location: http://localhost/ProjetWeb/pages/gouter.php?err=$err');
                 exit();
             }
+
+            $requete="SELECT `prenomEnfant`,`nomEnfant`,`soldeEnfants` FROM `compteenfants` WHERE `numEnfant`=$idEnfant;";
+
+            $resultatEnfant=mysqli_query($co,$requete) or die("erreur de requete liste produit");
+            $row=mysqli_fetch_assoc($resultatEnfant);
+
             echo "<h2> Recapitulatif de la commande :</h2>";
+            echo "<h5>Commande pour ".$row["prenomEnfant"]." ".$row["nomEnfant"]." , solde actuel: ".$row["soldeEnfants"]."€</h5>";
             $max=count($idProd);
             $sommeTotal=0;
             for($i=0;$i<$max;$i++){
@@ -93,10 +101,23 @@
                 }
             }
             echo "total des achats $sommeTotal €";
+            if($sommeTotal>$row["soldeEnfants"]){
+                echo "<h5>Solde insufficent <a href='../pages/rechargerSolde'>recharger le compte</a></h5>";
+            }
             ?>
             <div class="d-flex flex-row ">
+
                 <form class="m-1" method="post" action="../traitements/gouter_confirm.php" >
-                    <input type="submit" value="Confirmer">
+                    <?php
+                    for($i=0;$i<$max;$i++){
+                        if(!empty($qteAchete[$i])) {
+                            echo "<input type='hidden' name='$idProd[$i]' value='$qteAchete[$i]'>";
+                        }
+                    }
+                    echo "<input type='hidden' name='enfant' value='$idEnfant'>";
+                    echo "<input type='hidden' name='sommeTotal' value='$sommeTotal'>";
+                    ?>
+                    <input  <?php if($sommeTotal>$row["soldeEnfants"]){ echo "disabled";}?> type="submit" value="Confirmer">
                 </form>
 
                 <form class="m-1" method="post" action=" ../pages/gouter.php" >
