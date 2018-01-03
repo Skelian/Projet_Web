@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a0894d3-142f-4a46-aa20-81b522302733" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pages/connexion.php" afterPath="$PROJECT_DIR$/pages/connexion.php" />
-      <change beforePath="$PROJECT_DIR$/pages/gouter.php" afterPath="$PROJECT_DIR$/pages/gouter.php" />
-      <change beforePath="$PROJECT_DIR$/pages/produit.php" afterPath="$PROJECT_DIR$/pages/produit.php" />
+      <change beforePath="$PROJECT_DIR$/accueil.php" afterPath="$PROJECT_DIR$/accueil.php" />
       <change beforePath="$PROJECT_DIR$/pages/utilisateur.php" afterPath="$PROJECT_DIR$/pages/utilisateur.php" />
-      <change beforePath="$PROJECT_DIR$/styles/css/style.css" afterPath="$PROJECT_DIR$/styles/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/traitements/gouter_recap.php" afterPath="$PROJECT_DIR$/traitements/gouter_recap.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,9 +32,9 @@
             <state relative-caret-position="221">
               <caret line="46" column="108" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="46" selection-end-column="108" />
               <folding>
-                <marker date="1514637475228" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
-                <marker date="1514637475228" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
-                <marker date="1514637475228" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
+                <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
+                <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
+                <marker date="1514975878234" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
               </folding>
             </state>
           </provider>
@@ -48,8 +43,8 @@
       <file leaf-file-name="gouter_recap.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/traitements/gouter_recap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="101" column="34" lean-forward="false" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+            <state relative-caret-position="501">
+              <caret line="108" column="7" lean-forward="true" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
               <folding>
                 <marker date="1514896265274" expanded="true" signature="2834:2939" ph="SELECT `numP... produit" />
               </folding>
@@ -309,12 +304,12 @@
       <workItem from="1514480844413" duration="1089000" />
       <workItem from="1514536639334" duration="12099000" />
       <workItem from="1514627539017" duration="4974000" />
-      <workItem from="1514745014621" duration="11685000" />
+      <workItem from="1514745014621" duration="11689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103847000" />
+    <option name="totallyTimeSpent" value="103851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -391,9 +386,9 @@
         <state relative-caret-position="816">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <marker date="1514637475228" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
-            <marker date="1514637475228" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
-            <marker date="1514637475228" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
+            <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
+            <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
+            <marker date="1514975878234" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
           </folding>
         </state>
       </provider>
@@ -439,9 +434,9 @@
         <state relative-caret-position="408">
           <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
           <folding>
-            <marker date="1514637475228" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
-            <marker date="1514637475228" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
-            <marker date="1514637475228" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
+            <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
+            <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
+            <marker date="1514975878234" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
           </folding>
         </state>
       </provider>
@@ -502,9 +497,9 @@
         <state relative-caret-position="408">
           <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
           <folding>
-            <marker date="1514637475228" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
-            <marker date="1514637475228" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
-            <marker date="1514637475228" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
+            <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
+            <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
+            <marker date="1514975878234" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
           </folding>
         </state>
       </provider>
@@ -707,17 +702,17 @@
         <state relative-caret-position="221">
           <caret line="46" column="108" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="46" selection-end-column="108" />
           <folding>
-            <marker date="1514637475228" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
-            <marker date="1514637475228" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
-            <marker date="1514637475228" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
+            <marker date="1514975878234" expanded="true" signature="2420:2652" ph="SELECT `pers... enfant" />
+            <marker date="1514975878234" expanded="true" signature="2774:2853" ph="SELECT `numP... produit" />
+            <marker date="1514975878234" expanded="true" signature="2774:2879" ph="SELECT `numP... produit" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/traitements/gouter_recap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="101" column="34" lean-forward="false" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+        <state relative-caret-position="501">
+          <caret line="108" column="7" lean-forward="true" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
           <folding>
             <marker date="1514896265274" expanded="true" signature="2834:2939" ph="SELECT `numP... produit" />
           </folding>
