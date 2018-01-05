@@ -1,7 +1,7 @@
 #contenue{
     position: absolute;
-    left: 20%;
-    width: 60%;
+    left: 15%;
+    width: 70%;
     top:20%;
     padding-right: 20px;
     padding-left: 20px;
@@ -13,25 +13,31 @@
 }
 #form_gouter{
     display: inline-flex;
+    height: 70%;
+    width: 100%;
 }
 #liste_Enfant{
-    position: relative;
-    left: 5px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: 100%;
+    width: 25%;
 }
 #cadre_liste_enfant{
     border:solid 1px black;
-
+    overflow:auto;
+    height: 80%;
 
 }
 #liste_Produit{
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 55%;
+    height: 100%;
 }
 #cadre_liste_Produit{
     border:solid 1px black;
-
+    overflow:auto;
+    height: 80%;
 }
 body{
 

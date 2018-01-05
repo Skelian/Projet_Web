@@ -9,6 +9,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </head>
+<?php
+require_once("../modeles/benevole.php");
+session_start();
+?>
 <body>
 <!-- Menu -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -37,11 +41,45 @@
     </div>
 </nav>
 
-<div id="contenue">
-    <h1>Produit</h1>
+    <div id="contenue">
+        <h1>Produit</h1>
+        <?php
+            require_once("../modeles/bd.php");
+            $bd = new Bd();
+            $bd->connexion();
+            $co = $bd->getCo();
 
-    <!--le planning des prochains gouter ou annonces -->
-    ici la liste des produits et autre fonction lier au produit + gestion des stocks
-</div>
+        if(!isset($_SESSION['benevole'])) {  // espace invitée
+
+            $requete = "SELECT `numProduit`,`nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit`";
+            $resultatProduitPublic = mysqli_query($co, $requete) or die("erreur de requete liste produit");
+        ?>
+
+        <label for="listeProduit">Liste des produits</label>
+        <div id="cadre_liste_Produit">
+            <table class="table table-striped">
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prix/u</th>
+                </tr>
+                <?php
+
+                        while ($row = mysqli_fetch_assoc($resultatProduitPublic)) {  ?>
+                            <tr>
+                                <td><?php echo $row['nomProduit']; ?></td>
+                                <td><?php echo $row['prixProduit']; ?>€</td>
+                            </tr>
+                        <?php   }
+                ?>
+            </table>
+        </div>
+        <?php
+        }else{
+
+
+        }
+
+        ?>
+    </div>
 </body>
 </html>
