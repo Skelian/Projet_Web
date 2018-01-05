@@ -39,9 +39,54 @@
 
 <div id="contenue">
     <h1>Utilisateur</h1>
+	<br />
+    <!-- Formulaire à remplir pour faire une demande de création de compte au président -->
+	<h3> Demande de création du compte</h3>
+	<p>Pour créer un compte utilisateur (qui vous permettra ensuite de vous connecter sur le site APERO), il faut remplir
+	le formulaire ci-dessous. Votre demande sera alors examinée puis validée ou non selon les différents critères que 
+	vous aurez renseignés dans ce formulaire. La réponse vous sera envoyer par mail.</p>
 
-    <!--le planning des prochains gouter ou annonces -->
-   Ici au choix la liste des Parents, enfants ou ques
+	<form method="post" action="confirmation.php">
+		<p> Nom : <br />
+			<input type="text" name="nom"/><br />
+			Prénom : <br />
+			<input type="text" name="prenom"/><br />
+			Date de naissance : <br />
+			<input type="date" name="dateNaissance"/>
+		</p>
+		
+		<p> Adresse mail :<br />
+			<input type="text" name="email"/><br />
+			Confirmer adresse mail : <br />
+			<input type="text" name="mailConfirmation"/><br />
+			Téléphone : <br />
+			<input type="text" name="telephone"/>
+		</p>
+		
+		<p> Identifiant : <br />
+			<input type="text" name="identifiant"/><br />
+			Mot de passe : <br />
+			<input type="password" name="mdp"/><br />
+			Confirmation mot de passe : <br />
+			<input type="password" name="mdpConfirmation"/>
+		</p>
+		
+		<p> Code Postal : <br />
+			<input type="text" name="codePostal"/>
+		</p>
+		
+		<p>
+			Photo de la carte d'identité :
+			<input type="file" name="photoCarteIdentite"/><br />
+			Photo d'identité :
+			<input type="file" name="photoIdentite"/><br />
+		</p>
+		
+		<p><br />
+			<button type="submit">Envoyer</button>
+		</p>
+	</form>
+	
 </div>
 </body>
 </html>
