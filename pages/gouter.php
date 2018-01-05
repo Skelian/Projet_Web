@@ -58,7 +58,7 @@ session_start();
             $resultatEnfant = mysqli_query($co, $requete) or die("erreur de requete liste enfant");
             $requete = "SELECT `numProduit`,`nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit` WHERE `quantiteProduit`>0 ";
             $resultatProduit = mysqli_query($co, $requete) or die("erreur de requete liste produit");
-            $tabProduit = array();
+
             ?>
 
 
@@ -72,13 +72,15 @@ session_start();
                                 <?php
                                 while ($row = mysqli_fetch_assoc($resultatEnfant)){
                                 ?>
-                                <tr>
-                                    <td><input type="radio" name="listeEnfant"
-                                               value="<?php echo $row['id']; ?>"> <?php echo $row['prenom'] . ' ' . $row['nom']; ?>
-                                    </td>
-                                    <?php
-                                    }
-                                    ?>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" name="listeEnfant"
+                                                   value="<?php echo $row['id']; ?>"> <?php echo $row['prenom'] . ' ' . $row['nom']; ?>
+                                        </td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>
                             </table>
                         </div>
                     </div>
@@ -94,7 +96,6 @@ session_start();
                                 </tr>
                                 <?php
                                 while ($row = mysqli_fetch_assoc($resultatProduit)) {
-                                    $tabProduit[] = "produit_" . $row['numProduit'];
                                     ?>
                                     <tr>
                                         <td><?php echo $row['nomProduit']; ?></td>
@@ -111,7 +112,6 @@ session_start();
                     </div>
                 </div>
                 <div>
-                    <input type="hidden" name="listeProduit" value="<?php $tabProduit ?>">
                     <input type="submit" value="Confirmer">
                     <input type="reset">
                 </div>
