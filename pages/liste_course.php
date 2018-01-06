@@ -35,7 +35,7 @@
                 <a class="nav-link" href="../pages/membre.php">Membres </a>
             </li>
 			<li class="nav-item active">
-                <a class="nav-link" href="#">Courses <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="../pages/course.php">Courses <span class="sr-only">(current)</span></a>
             </li>
 			<li class="nav-item">
                 <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
@@ -50,39 +50,20 @@
 <div id="contenue">
     <h1>Courses</h1>
 	<br />
-	<p>Listes de courses faites par les membres de l'APERO.</p>
+	<p>Liste de courses faite par <?php echo $nom?> <?php echo $prenom?></p><!-- Nom/prénom de l'utilisateur qui a fait la liste -->
 	
-	<table>
-		
-		<!-- En-tête -->
-		<tr>
-			<th>Nom</th>
-			<th>Prénom</th>
-			<th>Date</th>
-			<th>Montant</th>
-			<th> </th><!-- Colonne pour mettre les checkbox -->
-		</tr>
-		
-		<!-- Reste -->
-		<!-- Pour la dernière colonne, il faut mettre des checkbox (pour pouvoir consulter une liste de courses par exemple) -->
-		<tr>
-		
-		</tr>
-
-	</table>
+	<!-- Pour chaque produit que l'on veut ajouter, il faut voir le nom, la quantité et le prix/u et le prix du lot-->
 	
-	<p><br />
-		<form method="post" action="liste_course.php">
-			<button type="submit" name="btnVoirCourse">Voir la liste en détails</button> 
-		</form>
-	</p>
+	
+	
+	<!-- Afficher le prix total de la liste -->
 	
 	<p>
-		<form method="post" action="formulaire_course.php">
-			<button type="submit" name="btnAjouterCourse">Ajouter une liste de courses</button> 
+		<form method="post" action="course.php">
+			<button type="submit" name="btnRetour">Retour</button> 
 		</form>
 	</p>
-	
+
 </div>
 </body>
 </html>

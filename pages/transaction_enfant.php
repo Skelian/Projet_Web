@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/css/bootstrap.css">
     <link rel="stylesheet" href="../styles/css/style.css" />
-    <title>APERO - Courses</title>
+    <title>APERO - Enfants</title>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
@@ -28,61 +28,39 @@
             <li class="nav-item">
                 <a class="nav-link" href="../pages/produit.php">Produits </a>
             </li>
-			<li class="nav-item">
-                <a class="nav-link" href="../pages/enfant.php">Enfants </a>
+			<li class="nav-item active">
+                <a class="nav-link" href="../pages/enfant.php">Enfants <span class="sr-only">(current)</span></a>
             </li>
 			<li class="nav-item">
                 <a class="nav-link" href="../pages/membre.php">Membres </a>
             </li>
-			<li class="nav-item active">
-                <a class="nav-link" href="#">Courses <span class="sr-only">(current)</span></a>
+			<li class="nav-item">
+                <a class="nav-link" href="../pages/course.php">Courses </a>
             </li>
 			<li class="nav-item">
                 <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link "  href="../pages/connexion.php">Connexion </a>
+                <a class="nav-link " href="../pages/connexion.php">Connexion </a>
             </li>
         </ul>
     </div>
 </nav>
 
 <div id="contenue">
-    <h1>Courses</h1>
+    <h1>Enfants</h1>
 	<br />
-	<p>Listes de courses faites par les membres de l'APERO.</p>
+	<p>Transaction(s) faite(s) par <?php echo $nom?> <?php echo $prenom?></p><!-- Nom/prénom du compte enfant qui a fait la transaction -->
 	
-	<table>
-		
-		<!-- En-tête -->
-		<tr>
-			<th>Nom</th>
-			<th>Prénom</th>
-			<th>Date</th>
-			<th>Montant</th>
-			<th> </th><!-- Colonne pour mettre les checkbox -->
-		</tr>
-		
-		<!-- Reste -->
-		<!-- Pour la dernière colonne, il faut mettre des checkbox (pour pouvoir consulter une liste de courses par exemple) -->
-		<tr>
-		
-		</tr>
-
-	</table>
+	<!-- Pour chaque transaction, il faut voir le le numéro, la date, l'heure et le montant -->
 	
-	<p><br />
-		<form method="post" action="liste_course.php">
-			<button type="submit" name="btnVoirCourse">Voir la liste en détails</button> 
-		</form>
-	</p>
 	
 	<p>
-		<form method="post" action="formulaire_course.php">
-			<button type="submit" name="btnAjouterCourse">Ajouter une liste de courses</button> 
+		<form method="post" action="enfant.php">
+			<button type="submit" name="btnRetour">Retour</button> 
 		</form>
 	</p>
-	
+
 </div>
 </body>
 </html>
