@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/css/bootstrap.css">
     <link rel="stylesheet" href="../styles/css/style.css" />
-    <title>connexion APERO</title>
+    <title>APERO - Connexion</title>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
@@ -25,16 +25,25 @@ session_start();
             <li class="nav-item">
                 <a class="nav-link" href="../accueil.php">Accueil </a>
             </li>
-            <li class="nav-item  ">
-                <a class="nav-link" href="../pages/gouter.php">Gouter </a>
+            <li class="nav-item">
+                <a class="nav-link" href="../pages/gouter.php">Goûters </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../pages/produit.php">Produit </a>
+                <a class="nav-link" href="../pages/produit.php">Produits </a>
             </li>
-            <li class="nav-item">
+			<li class="nav-item">
+                <a class="nav-link" href="../pages/enfant.php">Enfants </a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="../pages/membre.php">Membres </a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="../pages/course.php">Courses </a>
+            </li>
+			<li class="nav-item active">
                 <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link "  href="#">Connexion <span class="sr-only">(current)</span></a>
             </li>
         </ul>
@@ -75,14 +84,14 @@ session_start();
             <form method="post" action=" ../traitements/modif_login.php">
                 <p>
                     Nom d'utilisateur actuel :<?php echo $identifiant ?>.<br>
-                    <label for="identifiant">Nouveau identifiant :</label>
+                    <label for="identifiant">Nouvel identifiant :</label>
                     <input type="text"  name="identifiant">
                     <button type="submit">Modifier</button>
                  </p>
 
                 <form method="post" action=" ../traitements/modif_mail.php">
                     <p>
-                        Adresse Mail actuel : <?php echo $mail?>.<br>
+                        Adresse mail actuelle : <?php echo $mail?>.<br>
                         <label for="mail">Nouvelle adresse mail :</label>
                         <input type="text"  name="mail">
                         <button type="submit">Modifier</button>
@@ -91,8 +100,8 @@ session_start();
 
                 <form method="post" action=" ../traitements/modif_num.php">
                     <p>
-                        Numero de telephone actuel : <?php echo $tel?>.<br>
-                        <label for="mail">Nouveau telephone :</label>
+                        Numero de téléphone actuel : <?php echo $tel?>.<br>
+                        <label for="mail">Nouveau téléphone :</label>
                         <input type="text"  name="mail">
                         <button type="submit">Modifier</button>
                     </p>
@@ -110,7 +119,7 @@ session_start();
 
                 <form method="post" action=" ../traitements/deconnexion.php">
                     <p>
-                        <button style="position: relative; left: 70%;" type="submit">Se deconnecter</button>
+                        <button style="position: relative; left: 70%;" type="submit">Se déconnecter</button>
                     </p>
                 </form>
 
