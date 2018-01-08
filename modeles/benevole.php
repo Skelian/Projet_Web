@@ -91,7 +91,6 @@ class Benevole {
 
 	public function deconnexion(){
 		session_destroy();
-
 	}
 	
 }
