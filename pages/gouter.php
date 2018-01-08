@@ -67,7 +67,7 @@ session_start();
                 <div id="form_gouter">
                     <div id="liste_Enfant">
                         <label for="listeEnfant"> Liste des Enfants</label>
-                        <div id="cadre_liste_enfant">
+                        <div id="cadre_liste_enfant" class="table-responsive-md">
                             <table class="table table-striped">
                                 <?php
                                 while ($row = mysqli_fetch_assoc($resultatEnfant)){
@@ -86,7 +86,7 @@ session_start();
                     </div>
                     <div id="liste_Produit">
                         <label for="listeProduit">Liste des Produits</label>
-                        <div id="cadre_liste_Produit">
+                        <div id="cadre_liste_Produit" class="table-responsive-md">
                             <table class="table table-striped">
                                 <tr>
                                     <th scope="col">Nom</th>

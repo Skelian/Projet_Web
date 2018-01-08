@@ -9,11 +9,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </head>
+<body>
 <?php
 require_once("../modeles/benevole.php");
 session_start();
 ?>
-<body>
 <!-- Menu -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="../accueil.php"><img src="../images/logo.png" alt="logo apero" class="img-thumbnail img-logo"></a>
@@ -42,44 +42,74 @@ session_start();
 </nav>
 
     <div id="contenue">
-        <h1>Produit</h1>
-        <?php
-            require_once("../modeles/bd.php");
-            $bd = new Bd();
-            $bd->connexion();
-            $co = $bd->getCo();
 
-        if(!isset($_SESSION['benevole'])) {  // espace invitée
+            <h1>Produit</h1>
+            <?php
+                require_once("../modeles/bd.php");
+                $bd = new Bd();
+                $bd->connexion();
+                $co = $bd->getCo();
 
-            $requete = "SELECT `numProduit`,`nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit`";
-            $resultatProduitPublic = mysqli_query($co, $requete) or die("erreur de requete liste produit");
-        ?>
+            if(!isset($_SESSION['benevole'])) {  // espace invitée
 
-        <label for="listeProduit">Liste des produits</label>
-        <div id="cadre_liste_Produit">
-            <table class="table table-striped">
-                <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Prix/u</th>
-                </tr>
-                <?php
+                $requete = "SELECT `numProduit`,`nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit`";
+                $resultatProduitPublic = mysqli_query($co, $requete) or die("erreur de requete liste produit");
+            ?>
 
-                        while ($row = mysqli_fetch_assoc($resultatProduitPublic)) {  ?>
-                            <tr>
-                                <td><?php echo $row['nomProduit']; ?></td>
-                                <td><?php echo $row['prixProduit']; ?>€</td>
-                            </tr>
-                        <?php   }
-                ?>
-            </table>
-        </div>
-        <?php
-        }else{
+            <label for="listeProduit">Liste des produits</label>
+            <div id="cadre_liste_Produit" class="table-responsive-md">
+                <table class="table table-striped">
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prix/u</th>
+                    </tr>
+                    <?php
 
+                            while ($row = mysqli_fetch_assoc($resultatProduitPublic)) {  ?>
+                                <tr>
+                                    <td><?php echo $row['nomProduit']; ?></td>
+                                    <td><?php echo $row['prixProduit']; ?>€</td>
+                                </tr>
+                            <?php   }
+                    ?>
+                </table>
+            </div>
+            <?php
+            }else{
+                $requete = "SELECT `numProduit`,`nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit` ";
+                $resultatProduit = mysqli_query($co, $requete) or die("erreur de requete liste produit");
+            ?>
+                <label for="listeProduit">Liste des Produits</label>
+                <div id="cadre_liste_Produit" class="table-responsive-md">
+                    <table class="table table-striped">
+                        <tr>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prix/u</th>
+                            <th scope="col">en stock</th>
+                        </tr>
+                        <?php
+                        while ($row = mysqli_fetch_assoc($resultatProduit)) {
+                            if ($row['quantiteProduit']<10){
+                                $classLigne="bg-danger";
+                            }else if ($row['quantiteProduit']<20){
+                                $classLigne="bg-warning";
+                            }else{
+                                $classLigne="";
+                            }
+                            ?>
+                                <tr class="<?php echo $classLigne ?>">
+                                    <td><?php echo $row['nomProduit']; ?></td>
+                                    <td><?php echo $row['prixProduit']; ?>€</td>
+                                    <td><?php echo $row['quantiteProduit']; ?></td>
+                                </tr>
+                            <?php
+                        }
+                        ?>
+                    </table>
+                </div>
 
-        }
-
-        ?>
+            <?php
+            }?>
     </div>
 </body>
 </html>
