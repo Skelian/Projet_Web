@@ -9,7 +9,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </head>
+
 <body>
+<?php
+require_once("../modeles/benevole.php");
+session_start();
+if(!isset($_SESSION['benevole'])) {
+?>
 <!-- Menu -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 
@@ -22,21 +28,6 @@
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="../accueil.php">Accueil </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../pages/gouter.php">Goûters </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../pages/produit.php">Produits </a>
-            </li>
-			<li class="nav-item">
-                <a class="nav-link" href="../pages/enfant.php">Enfants </a>
-            </li>
-			<li class="nav-item">
-                <a class="nav-link" href="../pages/membre.php">Membres </a>
-            </li>
-			<li class="nav-item">
-                <a class="nav-link" href="../pages/course.php">Courses </a>
             </li>
 			<li class="nav-item active">
                 <a class="nav-link " href="#">Utilisateur <span class="sr-only">(current)</span></a>
@@ -99,5 +90,59 @@
 	</form>
 	
 </div>
+    <?php
+		}else{
+            $benevole= $_SESSION["benevole"];
+            $prenom=$benevole->getPrenom();
+            $nom=$benevole->getNom();
+            $identifiant=$benevole->getIdentifiant();
+            $mail=$benevole->getEmail();
+            $tel=$benevole->getTelephone();
+    ?>
+		
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div><a class="navbar-brand" href="../accueil.php"><img src="../images/logo.png" alt="logo apero" class="img-thumbnail img-logo"></a></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../accueil.php">Accueil </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../pages/gouter.php">Goûters </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../pages/produit.php">Produits </a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="../pages/enfant.php">Enfants </a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="../pages/membre.php">Membres </a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="../pages/course.php">Courses </a>
+            </li>
+			<li class="nav-item active">
+                <a class="nav-link " href="../pages/utilisateur.php">Utilisateur <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "  href="../pages/connexion.php">Connexion </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="contenue">
+    <h1>Utilisateur</h1>
+	<br />
+	<!-- Demander à Arthur ce qu'ony met -->
+	
+</div>
+<?php
+		}
+?>
 </body>
 </html>

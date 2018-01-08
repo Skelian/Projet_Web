@@ -1,5 +1,5 @@
 <?php
-require_once("../modeles/bd.php");
+require_once("bd.php");
 class Benevole {
 	private $co;
 	private $identifiant;
