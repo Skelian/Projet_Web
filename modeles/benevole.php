@@ -8,10 +8,14 @@ class Benevole {
 	private $mdp;
 	private $email;
     private $telephone;
+	private $dateNaissance;
+	private $codePostal
 	private $id;
+	
 	function __construct($co,$login,$mdp) {
             $this->co=$co;
-			$requete="SELECT `numBenevole` as num,`personne`.`nomPersonne` as nom, `personne`.`prenomPersonne` as prenom, `personne`.`mailPersonne` as mail, `personne`.`telPersonne` as tel 
+			$requete="SELECT `numBenevole` as num,`personne`.`nomPersonne` as nom, `personne`.`prenomPersonne` as prenom,
+			`personne`.`mailPersonne` as mail, `personne`.`telPersonne` as tel, `personne`.`codePostal` as CP, `personne`.`dateNaissance` as dateNaissance 
                       FROM `benevole`, `personne` 
                       WHERE `benevole`.`numPersonne`=`personne`.`numPersonne` 
                       AND `loginBenevole`='$login' AND `mdpBenevole`='$mdp'";
@@ -24,6 +28,8 @@ class Benevole {
                 $this->nom=$ligne['nom'];
                 $this->prenom=$ligne['prenom'];
                 $this->telephone = $ligne['tel'];
+				$this->dateNaissance = $ligne['dateNaissance'];
+				$this->codePostal = $ligne['CP'];
                 $this->identifiant =$login;
                 $this->mdp = $mdp;
             }
@@ -80,6 +86,16 @@ class Benevole {
     {
         return $this->telephone;
     }
+	
+	public function getDateNaissance()
+    {
+        return $this->dateNaissance;
+    }
+	
+	public function getCodePostal()
+    {
+        return $this->codePostal;
+    }	
 
     /**
      * @return mixed
