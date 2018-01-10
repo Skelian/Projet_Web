@@ -105,7 +105,7 @@ session_start();
                                         <td><?php echo $row['prixProduit']; ?>€</td>
                                         <td><?php echo $row['quantiteProduit']; ?></td>
                                         <td><input type="number" name="produit_<?php echo $row['numProduit']; ?>"
-                                                   min="0" max="5"></td>
+                                                   min="0" max="<?php echo $row['quantiteProduit']; ?>"></td>
                                     </tr>
                                     <?php
                                 }

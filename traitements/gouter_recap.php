@@ -55,7 +55,7 @@
             if(isset($_POST["listeEnfant"])){
                 $idEnfant=$_POST["listeEnfant"];
             }else{
-                $err+=4;
+                $err+=2;
             }
 
             $prod=0;
@@ -73,7 +73,8 @@
                     $nomProd[]=$row['nomProduit'];
                     $prixProd[]=$row['prixProduit'];
                     $qteAchete[]=$_POST["$nameProd"];
-                    $prod+=1;
+                    if($_POST["$nameProd"])
+                        $prod+=1;
                 }
             }
 
@@ -81,7 +82,7 @@
                 $err+=1;
             }
             if ($err>0){
-                header('Location: http://localhost/ProjetWeb/pages/gouter.php?err=$err');
+                header('Location: http://localhost/ProjetWeb/pages/gouter.php?err='.$err);
                 exit();
             }
 

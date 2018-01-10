@@ -29,6 +29,9 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/produit.php">Produits</a>
+                </li>
 				<li class="nav-item">
                     <a class="nav-link " href="./pages/utilisateur.php">Utilisateur </a>
                 </li>
@@ -38,14 +41,7 @@
             </ul>
 			
 		<?php
-			// Si on est co,  on affiche tous les onglets
 			}else{
-				$benevole= $_SESSION["benevole"];
-				$prenom=$benevole->getPrenom();
-				$nom=$benevole->getNom();
-				$identifiant=$benevole->getIdentifiant();
-				$mail=$benevole->getEmail();
-				$tel=$benevole->getTelephone();
 		?>
 			<ul class="navbar-nav">
                 <li class="nav-item active">
