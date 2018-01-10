@@ -56,28 +56,32 @@ session_start();
         $bd=new Bd();
         $bd->connexion();
         $co=$bd->getCo();
-
-        if(isset($_POST["prod"])){
-            $idProd=$_POST["prod"];
-        }else{
-            header('Location: http://localhost/ProjetWeb/pages/gouter.php?err=1');
-            exit();
+        if(isset($_POST['prod'])) {
+            $idProd = $_POST["prod"];
+            $requete="SELECT `nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit` WHERE `numProduit`='$idProd'";
+            $resultat=mysqli_query($co,$requete) or die("erreur de requete liste produit");
+            $row=mysqli_fetch_assoc($resultat);
         }
-        $requete="SELECT `nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit` WHERE `numProduit`='$idProd'";
-        $resultat=mysqli_query($co,$requete) or die("erreur de requete liste produit");
-        $row=mysqli_fetch_assoc($resultat);
         ?>
         <h1>Modifier un produit :</h1>
         <form  method="post" action="../traitements/finish_produit.php">
             <p>
+                <input type="hidden" name="idProd" value="<?php echo $idProd;?>">
                 <label for="nom">nom :</label>
-                <input type="text" value="<?php echo $row['nomProduit'];?>" name="nom">
+                <input type="text" value="<?php if(isset($_POST['prod'])) { echo $row['nomProduit'];}?>" name="nom">
 
                 <label for="prix">prix unitaire :</label>
-                <input type="number" value="<?php echo $row['prixProduit'];?>" name="prix">
+                <input type="number" value="<?php if(isset($_POST['prod'])) { echo $row['prixProduit'];}?>" name="prix">
             </p>
             <button type="submit">Modifier le produit</button>
         </form>
+        <div>
+            <br>
+            <a href="../pages/produit.php">
+                <button>Retour en arrière</button>
+            </a>
+        </div>
     </div>
+
 </body>
 </html>

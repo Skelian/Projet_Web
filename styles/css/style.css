@@ -16,7 +16,6 @@
     height: 70%;
     width: 100%;
 }
-
 #liste_Enfant{
     margin-right: 5%;
     height: 100%;
@@ -36,8 +35,10 @@
     overflow:auto;
     height: 80%;
 }
-.liste_bouton{
-    display: inline-flex;
+.table_prod{
+    overflow: auto;
+    height: 85%;
+
 }
 body{
 
