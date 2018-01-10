@@ -9,7 +9,7 @@ class Benevole {
 	private $email;
     private $telephone;
 	private $dateNaissance;
-	private $codePostal
+	private $codePostal;
 	private $id;
 	
 	function __construct($co,$login,$mdp) {
@@ -34,6 +34,55 @@ class Benevole {
                 $this->mdp = $mdp;
             }
 	}
+
+    /**
+     * @param mixed $identifiant
+     */
+    public function setIdentifiant($identifiant)
+    {
+        $this->identifiant = $identifiant;
+    }
+
+    /**
+     * @param mixed $mdp
+     */
+    public function setMdp($mdp)
+    {
+        $this->mdp = $mdp;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @param mixed $telephone
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+    }
+
+    /**
+     * @param mixed $dateNaissance
+     */
+    public function setDateNaissance($dateNaissance)
+    {
+        $this->dateNaissance = $dateNaissance;
+    }
+
+    /**
+     * @param mixed $codePostal
+     */
+    public function setCodePostal($codePostal)
+    {
+        $this->codePostal = $codePostal;
+    }
+
 	public function connexion(){
 		session_start();
 		echo "connexion $this->prenom";

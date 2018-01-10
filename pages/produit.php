@@ -21,26 +21,54 @@ session_start();
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="../accueil.php">Accueil </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../pages/gouter.php">Goûters </a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Produits <span class="sr-only">(current)</span></a>
-            </li>
-			<li class="nav-item">
-                <a class="nav-link" href="../pages/enfant.php">Enfants </a>
-            </li>
-			<li class="nav-item">
-                <a class="nav-link" href="../pages/membre.php">Membres </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link "  href="../pages/connexion.php">Connexion </a>
-            </li>
-        </ul>
+        <?php
+        require_once("../modeles/benevole.php");
+        session_start();
+
+        // Si on n'est pas co, on affiche que 3 onglets
+        if(!isset($_SESSION['benevole'])) {
+            ?>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/produit.php">Produits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="./pages/utilisateur.php">Utilisateur </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "  href="./pages/connexion.php">Connexion </a>
+                </li>
+            </ul>
+
+            <?php
+        }else{
+            ?>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../accueil.php">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/gouter.php">Goûters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Produits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../pages/enfant.php">Enfants </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../pages/membre.php">Membres </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "  href="../pages/connexion.php">Connexion </a>
+                </li>
+            </ul>
+            <?php
+        }
+        ?>
     </div>
 </nav>
 
