@@ -59,7 +59,7 @@
 	}
 
 	if($errChp>0){
-		header('Location: http://localhost/Projet_web/pages/utilisateur.php?errForm='.$errForm.'&errChp='.$errChp);
+		header('Location: http://localhost/Projet_web/pages/utilisateur.php?errForm='.$errForm.'&errChp='.$errChp);//enlever copie
 		exit();
 	}else{
 		$nom=$_POST["nom"];
@@ -100,5 +100,4 @@
 		}
 		mysqli_close($co);
 		header('Location: http://localhost/Projet_web/acceuil.php');
-	}
 ?>
