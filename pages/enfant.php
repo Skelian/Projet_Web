@@ -57,7 +57,7 @@
 			$resultatEnfant = mysqli_query($co, $requete) or die("erreur de requete liste enfant");
         ?>
                 <div style="height: 75%">
-                    <form method="post" action=" ../pages/modif_enfant.php" style="height: 100%;">
+                    <form method="post" action=" ../pages/crediter_enfant.php" style="height: 100%;">
                     <div  class="table-responsive-md table_prod">
                         <table class="table table-striped">
                             <tr>
@@ -65,7 +65,7 @@
                                 <th scope="col">Nom</th>
                                 <th scope="col">Prénom</th>
                                 <th scope="col">Solde</th>
-								<th scope="col">Edition</th>
+								<th scope="col">Crédit</th>
                             </tr>
                             <?php
                             while ($row = mysqli_fetch_assoc($resultatEnfant)) {
@@ -78,10 +78,11 @@
                                 }
                                 ?>
                                 <tr class="<?php echo $classLigne ?>">
-                                    <td><?php echo $row['nomProduit']; ?></td>
-                                    <td><?php echo $row['prixProduit']; ?>€</td>
+                                    <td><?php echo $row['numEnfant']; ?></td>
+                                    <td><?php echo $row['nomEnfant']; ?></td>
+									<td><?php echo $row['prenomEnfant']; ?></td>
                                     <td><?php echo $row['soldeEnfants']; ?></td>
-                                    <td><button type="submit" name="prod" value="<?php echo $row['numProduit']; ?>">Modifier</button></td>
+                                    <td><button type="submit" name="enf" value="<?php echo $row['numEnfant']; ?>">Créditer</button></td>
                                 </tr>
                                 <?php
                             }

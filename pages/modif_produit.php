@@ -29,19 +29,13 @@ session_start();
                     <a class="nav-link" href="../pages/gouter.php">Goûters </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Produits <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../pages/produit.php">Produits <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../pages/enfant.php">Enfants </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../pages/membre.php">Membres </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../pages/course.php">Courses </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link "  href="../pages/connexion.php">Connexion </a>
@@ -73,6 +67,9 @@ session_start();
 				<br>
                 <label for="prix">Prix unitaire :</label>
                 <input type="number" value="<?php if(isset($_POST['prod'])) { echo $row['prixProduit'];}?>" name="prix">
+				<br>
+                <label for="qte">Quantité :</label>
+                <input type="number" value="<?php if(isset($_POST['prod'])) { echo $row['quantiteProduit'];}?>" name="qte">
             </p>
             <button type="submit">Modifier le produit</button>
         </form>
