@@ -40,10 +40,10 @@ session_start();
 			<li class="nav-item">
                 <a class="nav-link" href="../pages/course.php">Courses </a>
             </li>
-			<li class="nav-item active">
+			<li class="nav-item ">
                 <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link "  href="#">Connexion <span class="sr-only">(current)</span></a>
             </li>
         </ul>

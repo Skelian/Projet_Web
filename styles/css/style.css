@@ -16,17 +16,15 @@
     height: 70%;
     width: 100%;
 }
+
 #liste_Enfant{
     margin-right: 5%;
-    margin-left: 5%;
     height: 100%;
     width: 25%;
 }
 #cadre_liste_enfant{
-    border:solid 1px black;
     overflow:auto;
     height: 80%;
-
 }
 #liste_Produit{
     margin-right: 5%;
@@ -35,9 +33,11 @@
     height: 100%;
 }
 #cadre_liste_Produit{
-    border:solid 1px black;
     overflow:auto;
     height: 80%;
+}
+.liste_bouton{
+    display: inline-flex;
 }
 body{
 
