@@ -17,7 +17,37 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+		
+		<?php
+			require_once("modeles/benevole.php");
+			session_start();
+			
+			// Si on n'est pas co, on affiche que 3 onglets
+			if(!isset($_SESSION['benevole'])) {
+		?>
             <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link " href="./pages/utilisateur.php">Utilisateur </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "  href="./pages/connexion.php">Connexion </a>
+                </li>
+            </ul>
+			
+		<?php
+			// Si on est co,  on affiche tous les onglets
+			}else{
+				$benevole= $_SESSION["benevole"];
+				$prenom=$benevole->getPrenom();
+				$nom=$benevole->getNom();
+				$identifiant=$benevole->getIdentifiant();
+				$mail=$benevole->getEmail();
+				$tel=$benevole->getTelephone();
+		?>
+			<ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
                 </li>
@@ -33,26 +63,56 @@
 				<li class="nav-item">
                     <a class="nav-link " href="./pages/membre.php">Membres </a>
                 </li>
-				<li class="nav-item">
-                    <a class="nav-link " href="./pages/course.php">Courses </a>
-                </li>
-				<li class="nav-item">
-                    <a class="nav-link " href="./pages/utilisateur.php">Utilisateur </a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link "  href="./pages/connexion.php">Connexion </a>
                 </li>
             </ul>
+		<?php
+			}
+		?>
+		
         </div>
     </nav>
 
-        <div id="contenue">
-             <h1>Accueil</h1>
+	<div id="contenue">
+		 <h1>Accueil</h1>
 
-            <!--le planning des prochains gouter ou annonces -->
-            Bienvenue sur le site de gestion des gouter de l'APERO. <br>
-            Planning des goûters à venir:
-        </div>
+		<!--le planning des prochains gouter ou annonces -->
+		Bienvenue sur le site de gestion des goûters de l'APERO. <br/><br/>	
+		
+		<h3>Qui Sommes-nous ?</h3>
+		<p>Nous sommes une association de parents bénévoles, qui distribue des goûters à moindre coût aux enfants de l'école
+		de rugby d'Orsay après leur entraînement. Ces goûters ont donc lieu le mercredi et le samedi à partir de 16h. 
+		Pour y avoir accès, l'enfant doit absolument être inscrit à l'APERO.		
+		</p>
+		
+		<h3>Comment vous inscrire ?</h3>
+		<p>Si vous voulez y inscrire un enfant, il faut passer par un parent bénévole. 
+		Pour celà, il faudra fournir les informations nécessaires de l'enfant auprès du parent bénévole lors des horaires d'un goûter.
+		Ce dernier inscrira l'enfant et celui-ci aura directement l'autorisation de participer aux goûters.
+		</p>
+		
+		<p>Si vous voulez vous inscrire en tant que parent bénévole, il faut faire une demande dans la rubrique "Utilisateur" de notre site
+		ou bien <a href="./pages/utilisateur.php">cliquer sur ce lien</a> pour vous y emmener.
+		</p>
+		
+		
+		<h3>Comment nous contacter ?</h3>
+		<ul>
+			<li>Pour venir sur place : <br>
+			- 20 rue Mademoiselle,  91 400 Orsay</li>
+			<li>Pour nous contacter à distance :<br>
+				- Mail : contact_apero@gmail.com<br>
+				- Téléphone : 01 23 45 67 89</li>
+		</ul>
+		
+		<h3>Horaires</h3>
+		<ul>
+			<li>Mercredi : 16h - 17h</li>
+			<li>Samedi : 16h - 17h</li>
+		</ul>
+		
+	</div>
 
 </body>
 </html>

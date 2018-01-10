@@ -57,3 +57,7 @@ a.bg-dark:focus, a.bg-dark:hover {
     position: absolute;
     right: 10%;
 }
+
+.erreur{
+	color:red;
+}

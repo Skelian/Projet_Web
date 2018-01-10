@@ -13,7 +13,62 @@
 <?php
 require_once("../modeles/benevole.php");
 session_start();
+if(!isset($_SESSION['benevole'])) {
 ?>
+<!-- Menu -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../accueil.php"><img src="../images/logo.png" alt="logo apero" class="img-thumbnail img-logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../accueil.php">Accueil </a>
+            </li>
+			<li class="nav-item">
+<<<<<<< HEAD
+                <a class="nav-link" href="../pages/course.php">Courses </a>
+            </li>
+			<li class="nav-item ">
+=======
+>>>>>>> 579754ce59da93f0b83b7b04768364da7baace61
+                <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link "  href="#">Connexion <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="contenue">
+	<h1>Connexion</h1>
+                    
+        Veuillez renseigner tous les champs :
+        <form method="post" action=" ../traitements/connexion.php">
+			<p>
+				<label for="identifiant">Utilisateur :</label>
+				<br>
+				<input type="text"  name="identifiant">
+			</p>
+			<p>
+				<label for="mdp">Mot de passe:</label>
+				<br>
+				<input type="password"  name="mdp">
+			</p>
+			<button type="submit">Se connecter</button>
+		</form>
+		
+        <?php
+        }else{
+            $benevole= $_SESSION["benevole"];
+            $prenom=$benevole->getPrenom();
+            $nom=$benevole->getNom();
+            $identifiant=$benevole->getIdentifiant();
+            $mail=$benevole->getEmail();
+            $tel=$benevole->getTelephone();
+        ?>
 <!-- Menu -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="../accueil.php"><img src="../images/logo.png" alt="logo apero" class="img-thumbnail img-logo"></a>
@@ -37,13 +92,7 @@ session_start();
 			<li class="nav-item">
                 <a class="nav-link" href="../pages/membre.php">Membres </a>
             </li>
-			<li class="nav-item">
-                <a class="nav-link" href="../pages/course.php">Courses </a>
-            </li>
-			<li class="nav-item ">
-                <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
-            </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link "  href="#">Connexion <span class="sr-only">(current)</span></a>
             </li>
         </ul>
@@ -51,33 +100,6 @@ session_start();
 </nav>
 
 <div id="contenue">
-    <?php
-        if(!isset($_SESSION['benevole'])) {
-            ?><h1>Connexion</h1>
-                    
-                    Veuillez renseigner tous les champs :
-                    <form method="post" action=" ../traitements/connexion.php">
-                        <p>
-                            <label for="identifiant">Utilisateur :</label>
-                            <br>
-                            <input type="text"  name="identifiant">
-                        </p>
-                        <p>
-                            <label for="mdp">Mot de passe:</label>
-                            <br>
-                            <input type="password"  name="mdp">
-                        </p>
-                        <button type="submit">Se connecter</button>
-                    </form>
-        <?php
-        }else{
-            $benevole= $_SESSION["benevole"];
-            $prenom=$benevole->getPrenom();
-            $nom=$benevole->getNom();
-            $identifiant=$benevole->getIdentifiant();
-            $mail=$benevole->getEmail();
-            $tel=$benevole->getTelephone();
-        ?>
             <h1> Mes infos</h1>
 
             <p>Bonjour <?php echo $prenom.' '.$nom; ?></p>
