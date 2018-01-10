@@ -27,9 +27,9 @@ if(!isset($_SESSION['benevole'])) {
                 <a class="nav-link" href="../accueil.php">Accueil </a>
             </li>
 			<li class="nav-item">
-                <a class="nav-link" href="../pages/course.php">Courses </a>
-            </li>
-			<li class="nav-item ">
+				<a class="nav-link" href="../pages/produit.php">Produits</a>
+			</li>
+			<li class="nav-item">
                 <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
             </li>
             <li class="nav-item active">
@@ -89,7 +89,7 @@ if(!isset($_SESSION['benevole'])) {
 			<li class="nav-item">
                 <a class="nav-link" href="../pages/membre.php">Membres </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link "  href="#">Connexion <span class="sr-only">(current)</span></a>
             </li>
         </ul>
@@ -102,43 +102,102 @@ if(!isset($_SESSION['benevole'])) {
             <p>Bonjour <?php echo $prenom.' '.$nom; ?></p>
             <form method="post" action=" ../traitements/modif_login.php">
                 <p>
-                    Nom d'utilisateur actuel :<?php echo $identifiant ?>.<br>
+                    Nom d'utilisateur actuel : <?php echo $identifiant ?><br>
                     <label for="identifiant">Nouvel identifiant :</label>
                     <input type="text"  name="identifiant">
+					<?php 
+						if(isset($_GET["errChp"])){
+							if($_GET["errChp"]>=16){
+								echo '<div class="erreur"> Veuillez saisir le nouvel identifiant. </div>';
+								$_GET["errChp"]-=16;
+							}
+						}
+					?>
                     <button type="submit">Modifier</button>
                  </p>
+			</form>
+			
 
                 <form method="post" action=" ../traitements/modif_mail.php">
                     <p>
-                        Adresse mail actuelle : <?php echo $mail?>.<br>
-                        <label for="mail">Nouvelle adresse mail :</label>
-                        <input type="text"  name="mail">
+                        Adresse mail actuelle : <?php echo $mail?><br>
+                        <label for="email">Nouvelle adresse mail :</label>
+                        <input type="text"  name="email">
+						<?php 
+							if(isset($_GET["errChp"])){
+								if($_GET["errChp"]>=8){
+									echo '<div class="erreur"> Veuillez saisir la nouvelle adresse mail. </div>';
+									$_GET["errChp"]-=8;
+								}
+							}
+							if(isset($_GET["errForm"])){
+								if($_GET["errForm"]>=8){
+									echo '<div class="erreur"> Mail invalide, veuillez vérifier votre adresse mail. </div>';
+									$_GET["errForm"]-=8;
+								}
+							}
+						?>
                         <button type="submit">Modifier</button>
                     </p>
                 </form>
 
+				
                 <form method="post" action=" ../traitements/modif_num.php">
                     <p>
-                        Numero de téléphone actuel : <?php echo $tel?>.<br>
-                        <label for="mail">Nouveau téléphone :</label>
-                        <input type="text"  name="mail">
+                        Numero de téléphone actuel : <?php echo $tel?><br>
+                        <label for="telephone">Nouveau téléphone :</label>
+                        <input type="text"  name="telephone">
+						<?php
+							if(isset($_GET["errChp"])){
+								if($_GET["errChp"]>=4){
+									echo '<div class="erreur"> Veuillez saisir le nouveau numéro de téléphone. </div>';
+									$_GET["errChp"]-=4;
+								}
+							}
+							if(isset($_GET["errForm"])){
+								if($_GET["errForm"]>=4){
+									echo '<div class="erreur"> Téléphone invalide, veuillez vérifier votre numéro de téléphone. </div>';
+									$_GET["errForm"]-=4;
+								}
+							}
+						?>
                         <button type="submit">Modifier</button>
                     </p>
                 </form>
-                <form method="post" action=" ../traitements/modif_num.php">
+				
+				
+                <form method="post" action=" ../traitements/modif_mdp.php">
                     <p>
                         Changer votre mot de passe : <br>
                         <label for="mdp">Nouveau mot de passe :</label> <br>
-                        <input type="text"  name="mdp"> <br>
+                        <input type="password"  name="mdp"> <br>
+						<?php
+						if(isset($_GET["errChp"])){
+							if($_GET["errChp"]>=2){
+								echo '<div class="erreur"> Veuillez saisir le nouveau mot de passe. </div>';
+								$_GET["errChp"]-=2;
+							}
+						}	
+						?>
                         <label for="mdp">Confirmer votre nouveau mot de passe :</label> <br>
-                        <input type="text"  name="mdpConfirmation">
+                        <input type="password"  name="mdpConfirmation">
+						<?php 
+							if(isset($_GET["errChp"])){
+								if($_GET["errChp"]>=1){
+									echo '<div class="erreur"> Veuillez confirmer votre mot de passe. </div>';
+									$_GET["errChp"]-=1;
+								}
+							}	
+						?>
                         <button type="submit">Modifier</button>
                     </p>
                 </form>
+				
 
                 <form method="post" action=" ../traitements/deconnexion.php">
                     <p>
                         <button style="position: relative; left: 70%;" type="submit">Se déconnecter</button>
+						<?php session_destroy(); ?>
                     </p>
                 </form>
 

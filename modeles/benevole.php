@@ -34,7 +34,23 @@ class Benevole {
                 $this->mdp = $mdp;
             }
 	}
+	 
+	// Retourne un tableau d'enfant
+	function liste_enfants($co){
+		$requete="SELECT nomPersonne, prenomPersonne, dateNaissance, numCategorie, mailPersonne, telPersonne, codePostal
+				  FROM personne p, enfant e
+				  WHERE p.numPersonne=e.numPersonne";
 
+				  
+		$resultat = mysqli_query($co, $requete);
+		$liste=[];
+		while ($row = mysqli_fetch_assoc($resultat)){
+			array_push($liste, new benevole($row));
+		}
+		
+		return $liste;
+	}
+	
     /**
      * @param mixed $identifiant
      */

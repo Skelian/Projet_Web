@@ -30,7 +30,7 @@
 	if(empty($_POST["telephone"])){
 		$errChp+=64;
 	}else
-	if(!preg_match($mailExp,$_POST["telephone"])){
+	if(!preg_match($telExp,$_POST["telephone"])){
 		$errForm+=64;
 	}
 	
@@ -59,7 +59,7 @@
 	}
 
 	if($errChp>0){
-		header('Location: http://localhost/Projet_web/pages/utilisateur.php?errForm='.$errForm.'&errChp='.$errChp);
+		header('Location: http://localhost/ProjetWeb/pages/utilisateur.php?errForm='.$errForm.'&errChp='.$errChp);//enlever copie
 		exit();
 	}else{
 		$nom=$_POST["nom"];
@@ -99,6 +99,5 @@
 			echo "<p>Identifiant déjà existant, veuillez recommencer et saisir un autre identifiant !</p>";
 		}
 		mysqli_close($co);
-		header('Location: http://localhost/Projet_web/acceuil.php');
-	}
+		header('Location: http://localhost/ProjetWeb/acceuil.php');
 ?>
