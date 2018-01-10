@@ -27,6 +27,9 @@ if(!isset($_SESSION['benevole'])) {
                 <a class="nav-link" href="../accueil.php">Accueil </a>
             </li>
 			<li class="nav-item">
+				<a class="nav-link" href="../pages/produit.php">Produits</a>
+			</li>
+			<li class="nav-item">
                 <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
             </li>
             <li class="nav-item active">
@@ -163,20 +166,38 @@ if(!isset($_SESSION['benevole'])) {
                 </form>
 				
 				
-                <form method="post" action=" ../traitements/modif_num.php">
+                <form method="post" action=" ../traitements/modif_mdp.php">
                     <p>
                         Changer votre mot de passe : <br>
                         <label for="mdp">Nouveau mot de passe :</label> <br>
-                        <input type="text"  name="mdp"> <br>
+                        <input type="password"  name="mdp"> <br>
+						<?php
+						if(isset($_GET["errChp"])){
+							if($_GET["errChp"]>=2){
+								echo '<div class="erreur"> Veuillez saisir le nouveau mot de passe. </div>';
+								$_GET["errChp"]-=2;
+							}
+						}	
+						?>
                         <label for="mdp">Confirmer votre nouveau mot de passe :</label> <br>
-                        <input type="text"  name="mdpConfirmation">
+                        <input type="password"  name="mdpConfirmation">
+						<?php 
+							if(isset($_GET["errChp"])){
+								if($_GET["errChp"]>=1){
+									echo '<div class="erreur"> Veuillez confirmer votre mot de passe. </div>';
+									$_GET["errChp"]-=1;
+								}
+							}	
+						?>
                         <button type="submit">Modifier</button>
                     </p>
                 </form>
+				
 
                 <form method="post" action=" ../traitements/deconnexion.php">
                     <p>
                         <button style="position: relative; left: 70%;" type="submit">Se déconnecter</button>
+						<?php session_destroy(); ?>
                     </p>
                 </form>
 

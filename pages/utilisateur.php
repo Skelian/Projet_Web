@@ -29,6 +29,9 @@ if(!isset($_SESSION['benevole'])) {
             <li class="nav-item">
                 <a class="nav-link" href="../accueil.php">Accueil </a>
             </li>
+			<li class="nav-item">
+				<a class="nav-link" href="../pages/produit.php">Produits</a>
+			</li>
 			<li class="nav-item active">
                 <a class="nav-link " href="#">Utilisateur <span class="sr-only">(current)</span></a>
             </li>
@@ -220,6 +223,6 @@ if(!isset($_SESSION['benevole'])) {
 	</form>
 	
 </div>
-
+<?php } ?>
 </body>
 </html>

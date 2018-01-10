@@ -30,7 +30,7 @@
 	if(empty($_POST["telephone"])){
 		$errChp+=64;
 	}else
-	if(!preg_match($mailExp,$_POST["telephone"])){
+	if(!preg_match($telExp,$_POST["telephone"])){
 		$errForm+=64;
 	}
 	

@@ -4,8 +4,12 @@
 	
 	$errChp=0;
 	
-	if(empty($_POST["identifiant"])){
-		$errChp+=16;
+	if(empty($_POST["mdp"])){
+		$errChp+=2;
+	}
+	
+	if($_POST["mdpConfirmation"] != $_POST["mdp"]){
+		$errChp+=1;
 	}
 
 	if($errChp>0){
@@ -18,13 +22,13 @@
 		$co=$bd->getCo();
 		
 		$benevole=$_SESSION["benevole"];
-		$identifiant=$_POST["identifiant"];
+		$mdp=$_POST["mdp"];
 		$id = $benevole->getId();
 		
-		if(!empty($identifiant)){
-			$requete="UPDATE benevole SET loginBenevole='$identifiant' WHERE numBenevole=$id";
+		if(!empty($mdp)){
+			$requete="UPDATE benevole SET mdpBenevole='$mdp' WHERE numBenevole=$id";
 			$resultat=mysqli_query($co,$requete) or die("erreur de requete");
-			$benevole->setIdentifiant($identifiant);
+			$benevole->setMdp($mdp);
 			
 		}
 		mysqli_close($co);
