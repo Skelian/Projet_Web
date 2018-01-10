@@ -63,7 +63,7 @@
 		<!-- Reste -->
 		<!-- Pour la dernière colonne, il faut mettre des checkbox (pour pouvoir modifier un enfant par exemple) -->
 		<?php
-			require_once("../modeles/benevole.php");
+			/*require_once("../modeles/benevole.php");
 			foreach(liste_enfants($co) as $enfant){
 				echo "<tr><td>{$enfant->nomPersonne}</td><td>{$enfant->prenomPersonne}</td><td>{$enfant->dateNaissance}</td>
 				<td>{$enfant->numCategorie}</td><td>{$enfant->mailPersonne}</td><td>{$enfant->telPersonne}</td>
@@ -71,7 +71,7 @@
 			}
 
 			
-			mysqli_close($co);
+			mysqli_close($co);*/
 		?>
 
 	</table>
