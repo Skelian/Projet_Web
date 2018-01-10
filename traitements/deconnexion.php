@@ -1,16 +1,13 @@
 <?php
 	require_once("../modeles/benevole.php");	
-	
+	session_start();
+
 	if(isset($_SESSION['benevole'])){
-		session_destroy();
+		$benevole=$_SESSION['benevole'];
+		$benevole->deconnexion();
 		header('Location: http://localhost/ProjetWeb/pages/connexion.php');
 		
-	}else{
-		echo "CA MARCHE PAS";
-	}
-	
-	//session_destroy();
-	
-	header('Location: http://localhost/ProjetWeb/pages/connexion.php');
-
+	}else {
+        header('Location: http://localhost/ProjetWeb/pages/connexion.php$errDeco=1');
+    }
 ?>

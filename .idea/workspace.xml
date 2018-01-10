@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a0894d3-142f-4a46-aa20-81b522302733" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/traitements/deconnexion.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/traitements/modif_login.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/traitements/modif_mail.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/traitements/modif_mdp.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/traitements/modif_num.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/traitements/verif_form_enfant.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/modeles/benevole.php" afterPath="$PROJECT_DIR$/modeles/benevole.php" />
-      <change beforePath="$PROJECT_DIR$/pages/confirmation_enfant.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/connexion.php" afterPath="$PROJECT_DIR$/pages/connexion.php" />
-      <change beforePath="$PROJECT_DIR$/pages/enfant.php" afterPath="$PROJECT_DIR$/pages/enfant.php" />
-      <change beforePath="$PROJECT_DIR$/pages/formulaire_enfant.php" afterPath="$PROJECT_DIR$/pages/formulaire_enfant.php" />
-      <change beforePath="$PROJECT_DIR$/pages/utilisateur.php" afterPath="$PROJECT_DIR$/pages/utilisateur.php" />
-      <change beforePath="$PROJECT_DIR$/traitements/verif_form_utilisateur.php" afterPath="$PROJECT_DIR$/traitements/verif_form_utilisateur.php" />
+      <change beforePath="$PROJECT_DIR$/traitements/deconnexion.php" afterPath="$PROJECT_DIR$/traitements/deconnexion.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,6 +92,39 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/connexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="197" column="23" lean-forward="true" selection-start-line="197" selection-start-column="23" selection-end-line="197" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deconnexion.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/traitements/deconnexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="benevole.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modeles/benevole.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2941">
+              <caret line="173" column="26" lean-forward="true" selection-start-line="173" selection-start-column="26" selection-end-line="173" selection-end-column="26" />
+              <folding>
+                <marker date="1515623730494" expanded="true" signature="317:769" ph="SELECT `numB... benevole" />
+                <marker date="1515623730494" expanded="true" signature="1436:1610" ph="SELECT nomPe... personne" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="modif_produit.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/modif_produit.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -116,7 +137,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="finish_produit.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="finish_produit.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/traitements/finish_produit.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="685">
@@ -195,6 +216,7 @@
         <option value="$PROJECT_DIR$/pages/modif_produit.php" />
         <option value="$PROJECT_DIR$/pages/produit.php" />
         <option value="$PROJECT_DIR$/traitements/finish_produit.php" />
+        <option value="$PROJECT_DIR$/traitements/deconnexion.php" />
       </list>
     </option>
   </component>
@@ -330,17 +352,18 @@
       <workItem from="1515145477944" duration="5102000" />
       <workItem from="1515244283204" duration="8604000" />
       <workItem from="1515499349990" duration="11066000" />
-      <workItem from="1515595998263" duration="9833000" />
+      <workItem from="1515595998263" duration="10396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152458000" />
+    <option name="totallyTimeSpent" value="153021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -391,17 +414,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/gouter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          <folding>
-            <marker date="1515596202935" expanded="true" signature="2492:2728" ph="SELECT `numE... enfant" />
-            <marker date="1515596202935" expanded="true" signature="2855:2960" ph="SELECT `numP... produit" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/produit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -636,24 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modeles/benevole.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding>
-            <marker date="1515623730494" expanded="true" signature="317:769" ph="SELECT `numB... benevole" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -744,6 +738,33 @@
             <marker date="1515623635238" expanded="true" signature="737:817" ph="UPDATE `produit`... " />
             <marker date="1515623635238" expanded="true" signature="737:818" ph="UPDATE `produit`... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="197" column="23" lean-forward="true" selection-start-line="197" selection-start-column="23" selection-end-line="197" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modeles/benevole.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2941">
+          <caret line="173" column="26" lean-forward="true" selection-start-line="173" selection-start-column="26" selection-end-line="173" selection-end-column="26" />
+          <folding>
+            <marker date="1515623730494" expanded="true" signature="317:769" ph="SELECT `numB... benevole" />
+            <marker date="1515623730494" expanded="true" signature="1436:1610" ph="SELECT nomPe... personne" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traitements/deconnexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
