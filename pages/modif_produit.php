@@ -67,9 +67,6 @@ session_start();
 				<br>
                 <label for="prix">Prix unitaire :</label>
                 <input type="number" value="<?php if(isset($_POST['prod'])) { echo $row['prixProduit'];}?>" name="prix">
-				<br>
-                <label for="qte">Quantité :</label>
-                <input type="number" value="<?php if(isset($_POST['prod'])) { echo $row['quantiteProduit'];}?>" name="qte">
             </p>
             <button type="submit">Modifier le produit</button>
         </form>
