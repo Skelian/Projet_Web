@@ -43,7 +43,7 @@ if(!isset($_SESSION['benevole'])) {
 	<h1>Connexion</h1>
                     
         Veuillez renseigner tous les champs :
-        <form method="post" action=" ../traitements/connexion.php">
+        <form method="post" action="../traitements/connexion.php">
 			<p>
 				<label for="identifiant">Utilisateur :</label>
 				<br>
@@ -197,7 +197,6 @@ if(!isset($_SESSION['benevole'])) {
                 <form method="post" action=" ../traitements/deconnexion.php">
                     <p>
                         <button style="position: relative; left: 70%;" type="submit">Se déconnecter</button>
-						<?php session_destroy(); ?>
                     </p>
                 </form>
 
