@@ -69,7 +69,7 @@ session_start();
     </div>
 </nav>
 
-    <div id="contenue">
+    <div id="contenue" style="height: 70%;">
 
         <h1>Produits</h1>
         <?php
@@ -107,46 +107,49 @@ session_start();
                 $requete = "SELECT `numProduit`,`nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit` ";
                 $resultatProduit = mysqli_query($co, $requete) or die("erreur de requete liste produit");
             ?>
-
-                <form method="post" action=" ../pages/modif_produit.php" >
-                    <div class="form_produit">
-                        <label for="listeProduit">Liste des Produits</label>
-                        <div class="table-responsive-md" >
-                            <table class="table table-striped">
-                                <tr>
-                                    <th scope="col">Nom</th>
-                                    <th scope="col">Prix/u</th>
-                                    <th scope="col">en stock</th>
-                                    <th scope="col">modifier</th>
-                                </tr>
-                                <?php
-                                while ($row = mysqli_fetch_assoc($resultatProduit)) {
-                                    if ($row['quantiteProduit']<10){
-                                        $classLigne="bg-danger";
-                                    }else if ($row['quantiteProduit']<20){
-                                        $classLigne="bg-warning";
-                                    }else{
-                                        $classLigne="";
-                                    }
-                                    ?>
-                                        <tr class="<?php echo $classLigne ?>">
-                                            <td><?php echo $row['nomProduit']; ?></td>
-                                            <td><?php echo $row['prixProduit']; ?>€</td>
-                                            <td><?php echo $row['quantiteProduit']; ?></td>
-                                            <td><input type= "radio" name="prod" value="<?php echo $row['numProduit']; ?>"></td>
-                                        </tr>
-                                    <?php
+                <div style="height: 75%">
+                    <form method="post" action=" ../pages/modif_produit.php" style="height: 100%;">
+                    <label for="listeProduit">Liste des Produits</label>
+                    <div  class="table-responsive-md table_prod">
+                        <table class="table table-striped">
+                            <tr>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Prix/u</th>
+                                <th scope="col">En stock</th>
+                                <th scope="col">Edition</th>
+                            </tr>
+                            <?php
+                            while ($row = mysqli_fetch_assoc($resultatProduit)) {
+                                if ($row['quantiteProduit']<10){
+                                    $classLigne="bg-danger";
+                                }else if ($row['quantiteProduit']<20){
+                                    $classLigne="bg-warning";
+                                }else{
+                                    $classLigne="";
                                 }
                                 ?>
-                            </table>
-                        </div>
-                        <button type="submit">Modifier un produit</button>
-                        <button href="../pages/ajout_prod.php">Ajouter un produit</button>
-                        <button href="../pages/course.php">Enregistrer des courses</button>
+                                <tr class="<?php echo $classLigne ?>">
+                                    <td><?php echo $row['nomProduit']; ?></td>
+                                    <td><?php echo $row['prixProduit']; ?>€</td>
+                                    <td><?php echo $row['quantiteProduit']; ?></td>
+                                    <td><button type="submit" name="prod" value="<?php echo $row['numProduit']; ?>">Modifier</button></td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
+                        </table>
                     </div>
-                </form>
-
-
+                    </form>
+                </div>
+                <?php
+                if(isset($_GET['suc'])){
+                    echo " <p> Produit modifier avec succes! </p>";
+                }
+                ?>
+                <p>
+                    <a href="../pages/ajouter_prod.php"><button >Ajouter un produit</button></a>
+                    <a href="../pages/course.php"><button >Enregistrer des courses</button></a>
+                </p>
             <?php
             }?>
     </div>
