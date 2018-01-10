@@ -72,6 +72,9 @@ session_start();
     <div id="contenue" style="height: 70%;">
 
         <h1>Produits</h1>
+		<h3>Liste des produits</h3>
+		<p>Voici la liste des produits proposés pour les goûters de l'APERO.</p>
+		
         <?php
             require_once("../modeles/bd.php");
             $bd = new Bd();
@@ -84,7 +87,7 @@ session_start();
                 $resultatProduitPublic = mysqli_query($co, $requete) or die("erreur de requete liste produit");
             ?>
 
-            <label for="listeProduit">Liste des produits</label>
+            <!--<label for="listeProduit">Liste des produits</label>-->
             <div id="cadre_liste_Produit" class="table-responsive-md">
                 <table class="table table-striped">
                     <tr>
@@ -109,7 +112,7 @@ session_start();
             ?>
                 <div style="height: 75%">
                     <form method="post" action=" ../pages/modif_produit.php" style="height: 100%;">
-                    <label for="listeProduit">Liste des Produits</label>
+                    <!--<label for="listeProduit">Liste des Produits</label>-->
                     <div  class="table-responsive-md table_prod">
                         <table class="table table-striped">
                             <tr>
