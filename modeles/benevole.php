@@ -9,7 +9,7 @@ class Benevole {
 	private $email;
     private $telephone;
 	private $dateNaissance;
-	private $codePostal
+	private $codePostal;
 	private $id;
 	
 	function __construct($co,$login,$mdp) {

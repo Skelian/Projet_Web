@@ -35,6 +35,7 @@
 			<li class="nav-item">
                 <a class="nav-link" href="../pages/membre.php">Membres </a>
             </li>
+            <li class="nav-item">
                 <a class="nav-link "  href="../pages/connexion.php">Connexion </a>
             </li>
         </ul>
@@ -48,30 +49,111 @@
 	<h3> Formulaire d'inscription d'un enfant</h3>
 	<p>Pour ajouter un enfant dans l'APERO, il faut renseigner les champs suivants : </p>
 
-	<form method="post" action="confirmation_enfant.php">
+	<form method="post" action="verif_form_enfant.php">
 		<p> Nom : <br />
 			<input type="text" name="nomEnfant"/><br />
+			<?php 
+				if(isset($_GET["errChp"])){
+					if($_GET["errChp"]>=128){
+						echo '<div class="erreur"> Veuillez renseigner le nom de l\'enfant. <br /></div>';
+						$_GET["errChp"]-=128;
+					}
+				}	
+			?>
+
 			Prénom : <br />
 			<input type="text" name="prenomEnfant"/><br />
+			<?php 
+				if(isset($_GET["errChp"])){
+					if($_GET["errChp"]>=64){
+						echo '<div class="erreur"> Veuillez renseigner le prénom de l\'enfant. <br /></div>';
+						$_GET["errChp"]-=64;
+					}
+				}	
+			?>
+			
+			
 			Date de naissance : <br />
 			<input type="date" name="dateNaissanceEnfant"/>
+			<?php 
+				if(isset($_GET["errChp"])){
+					if($_GET["errChp"]>=32){
+						echo '<div class="erreur"> Veuillez renseigner la date de naissance de l\'enfant. <br /></div>';
+						$_GET["errChp"]-=32;
+					}
+				}	
+			?>
 		</p>
 		
 		<p> Adresse mail d'un parent :<br />
 			<input type="text" name="emailEnfant"/><br />
+			<?php 
+				if(isset($_GET["errChp"])){
+					if($_GET["errChp"]>=16){
+						echo '<div class="erreur"> Veuillez renseigner l\'adresse mail d\'un parent de l\'enfant. <br /></div>';
+						$_GET["errChp"]-=16;
+					}
+				}
+				if(isset($_GET["errForm"])){
+					if($_GET["errForm"]>=16){
+						echo '<div class="erreur"> Mail invalide, veuillez vérifier votre adresse mail.</div>';
+						$_GET["errForm"]-=16;
+					}
+				}				
+			?>
+			
 			Confirmer adresse mail : <br />
 			<input type="text" name="mailConfirmationEnfant"/><br />
+			<?php 
+				if(isset($_GET["errChp"])){
+					if($_GET["errChp"]>=8){
+						echo '<div class="erreur"> Veuillez confirmer l\'adresse mail du parent de l\'enfant. <br /></div>';
+						$_GET["errChp"]-=8;
+					}
+				}	
+			?>
+			
 			Téléphone d'un parent : <br />
 			<input type="text" name="telephoneEnfant"/>
+			<?php 
+				if(isset($_GET["errChp"])){
+					if($_GET["errChp"]>=4){
+						echo '<div class="erreur"> Veuillez renseigner le numéro de téléphone d\'un parent de l\'enfant. <br /></div>';
+						$_GET["errChp"]-=4;
+					}
+				}
+				if(isset($_GET["errForm"])){
+					if($_GET["errForm"]>=4){
+						echo '<div class="erreur"> Numéro de téléphone invalide, veuillez vérifier votre numéro de téléphone.</div>';
+						$_GET["errForm"]-=4;
+					}
+				}
+			?>
 		</p>
 		
 		<p> Code Postal : <br />
 			<input type="text" name="codePostalEnfant"/>
+			<?php 
+				if(isset($_GET["errChp"])){
+					if($_GET["errChp"]>=2){
+						echo '<div class="erreur"> Veuillez renseigner le code postal de l\'enfant. <br /></div>';
+						$_GET["errChp"]-=2;
+					}
+				}	
+			?>
 		</p>
 		
 		<p>
 			Photo d'identité :
 			<input type="file" name="photoIdentiteEnfant"/><br />
+			<?php 
+				if(isset($_GET["errChp"])){
+					if($_GET["errChp"]>=1){
+						echo '<div class="erreur"> Veuillez déposer la photo d\'identité de l\'enfant. <br /></div>';
+						$_GET["errChp"]-=1;
+					}
+				}	
+			?>
 		</p>
 		
 		<p><br />
