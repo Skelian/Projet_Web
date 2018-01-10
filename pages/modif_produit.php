@@ -64,13 +64,14 @@ session_start();
         }
         ?>
         <h1>Modifier un produit :</h1>
+		<br />
         <form  method="post" action="../traitements/finish_produit.php">
             <p>
                 <input type="hidden" name="idProd" value="<?php echo $idProd;?>">
-                <label for="nom">nom :</label>
+                <label for="nom">Nom :</label>
                 <input type="text" value="<?php if(isset($_POST['prod'])) { echo $row['nomProduit'];}?>" name="nom">
-
-                <label for="prix">prix unitaire :</label>
+				<br>
+                <label for="prix">Prix unitaire :</label>
                 <input type="number" value="<?php if(isset($_POST['prod'])) { echo $row['prixProduit'];}?>" name="prix">
             </p>
             <button type="submit">Modifier le produit</button>

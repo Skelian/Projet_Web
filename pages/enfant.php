@@ -41,56 +41,64 @@
     </div>
 </nav>
 
-<div id="contenue">
-    <h1>Enfants</h1>
-	<br />
-	<p>Liste des enfants inscrits dans l'APERO.</p>
-	
-	<table>
-		
-		<!-- En-tête -->
-		<tr>
-			<th>Nom</th>
-			<th>Prénom</th>
-			<th>Date de Naissance</th>
-			<th>Catégorie</th>
-			<th>Mail d'un parent</th>
-			<th>Téléphone d'un parent</th>
-			<th>Code Postal</th>
-			<th> </th><!-- Colonne pour mettre les checkbox -->
-		</tr>
-		
-		<!-- Reste -->
-		<!-- Pour la dernière colonne, il faut mettre des checkbox (pour pouvoir modifier un enfant par exemple) -->
-		<?php
-			/*require_once("../modeles/benevole.php");
-			foreach(liste_enfants($co) as $enfant){
-				echo "<tr><td>{$enfant->nomPersonne}</td><td>{$enfant->prenomPersonne}</td><td>{$enfant->dateNaissance}</td>
-				<td>{$enfant->numCategorie}</td><td>{$enfant->mailPersonne}</td><td>{$enfant->telPersonne}</td>
-				<td>{$enfant->codePostal}</td></tr>";
-			}
+<div id="contenue" style="height: 70%;">
 
-			
-			mysqli_close($co);*/
-		?>
-
-	</table>
-	
-	<p><br />
-		<form method="post" action="formulaire_enfant.php">
-			<button type="submit" name="btnAjouterEnfant">Ajouter un enfant</button> 
-			<button type="submit" name="btnCrediterEnfant">Créditer</button>
-			<button type="submit" name="btnModifierEnfant">Modifier</button>
-			<button type="submit" name="btnSupprimerEnfantx">Supprimer</button>
-		</form>
-	</p>
-	<p>
-		<form method="post" action="transaction_enfant.php">
-			<button type="submit" name="btnVoirTransaction">Voir les transactions</button> 
-		</form>
-	</p>
-	
-	
-</div>
+        <h1>Enfants</h1>
+		<br />
+		<h3>Liste des enfants inscrits dans l'APERO.</h3>
+		
+        <?php
+            require_once("../modeles/bd.php");
+            $bd = new Bd();
+            $bd->connexion();
+            $co = $bd->getCo();
+    
+			$requete = "SELECT * FROM compteenfants";
+			$resultatEnfant = mysqli_query($co, $requete) or die("erreur de requete liste enfant");
+        ?>
+                <div style="height: 75%">
+                    <form method="post" action=" ../pages/modif_enfant.php" style="height: 100%;">
+                    <div  class="table-responsive-md table_prod">
+                        <table class="table table-striped">
+                            <tr>
+                                <th scope="col">Numéro</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Prénom</th>
+                                <th scope="col">Solde</th>
+								<th scope="col">Edition</th>
+                            </tr>
+                            <?php
+                            while ($row = mysqli_fetch_assoc($resultatEnfant)) {
+                                if ($row['soldeEnfants']<5){
+                                    $classLigne="bg-danger";
+                                }else if ($row['soldeEnfants']<10){
+                                    $classLigne="bg-warning";
+                                }else{
+                                    $classLigne="";
+                                }
+                                ?>
+                                <tr class="<?php echo $classLigne ?>">
+                                    <td><?php echo $row['nomProduit']; ?></td>
+                                    <td><?php echo $row['prixProduit']; ?>€</td>
+                                    <td><?php echo $row['soldeEnfants']; ?></td>
+                                    <td><button type="submit" name="prod" value="<?php echo $row['numProduit']; ?>">Modifier</button></td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
+                        </table>
+                    </div>
+                    </form>
+                </div>
+                <?php
+                if(isset($_GET['suc'])){
+                    echo " <p> Produit modifier avec succes! </p>";
+                }
+                ?>
+                <p>
+                    <a href="../pages/ajouter_prod.php"><button >Ajouter un produit</button></a>
+                    <a href="../pages/course.php"><button >Enregistrer des courses</button></a>
+                </p>
+    </div>
 </body>
 </html>
