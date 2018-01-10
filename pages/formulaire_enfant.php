@@ -49,7 +49,7 @@
 	<h3> Formulaire d'inscription d'un enfant</h3>
 	<p>Pour ajouter un enfant dans l'APERO, il faut renseigner les champs suivants : </p>
 
-	<form method="post" action="verif_form_enfant.php">
+	<form method="post" action="../traitements/verif_form_enfant.php">
 		<p> Nom : <br />
 			<input type="text" name="nomEnfant"/><br />
 			<?php 

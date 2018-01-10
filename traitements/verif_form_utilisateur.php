@@ -59,7 +59,7 @@
 	}
 
 	if($errChp>0){
-		header('Location: http://localhost/Projet_web/pages/utilisateur.php?errForm='.$errForm.'&errChp='.$errChp);//enlever copie
+		header('Location: http://localhost/ProjetWeb/pages/utilisateur.php?errForm='.$errForm.'&errChp='.$errChp);//enlever copie
 		exit();
 	}else{
 		$nom=$_POST["nom"];
@@ -99,5 +99,5 @@
 			echo "<p>Identifiant déjà existant, veuillez recommencer et saisir un autre identifiant !</p>";
 		}
 		mysqli_close($co);
-		header('Location: http://localhost/Projet_web/acceuil.php');
+		header('Location: http://localhost/ProjetWeb/acceuil.php');
 ?>

@@ -9,7 +9,7 @@
 	}
 
 	if($errChp>0){
-		header('Location: http://localhost/Projet_web - copie/pages/connexion.php?&errChp='.$errChp);
+		header('Location: http://localhost/ProjetWeb/pages/connexion.php?&errChp='.$errChp);
 		exit();
 	}else{	
 		
@@ -28,6 +28,6 @@
 			
 		}
 		mysqli_close($co);
-		header('Location: http://localhost/Projet_web - copie/pages/connexion.php');
+		header('Location: http://localhost/ProjetWeb/pages/connexion.php');
 	}
 ?>

@@ -52,19 +52,27 @@
 		<tr>
 			<th>Nom</th>
 			<th>Prénom</th>
-			<th>Age</th>
+			<th>Date de Naissance</th>
 			<th>Catégorie</th>
 			<th>Mail d'un parent</th>
 			<th>Téléphone d'un parent</th>
-			<th>Solde</th>
+			<th>Code Postal</th>
 			<th> </th><!-- Colonne pour mettre les checkbox -->
 		</tr>
 		
 		<!-- Reste -->
 		<!-- Pour la dernière colonne, il faut mettre des checkbox (pour pouvoir modifier un enfant par exemple) -->
-		<tr>
-		
-		</tr>
+		<?php
+			require_once("../modeles/benevole.php");
+			foreach(liste_enfants($co) as $enfant){
+				echo "<tr><td>{$enfant->nomPersonne}</td><td>{$enfant->prenomPersonne}</td><td>{$enfant->dateNaissance}</td>
+				<td>{$enfant->numCategorie}</td><td>{$enfant->mailPersonne}</td><td>{$enfant->telPersonne}</td>
+				<td>{$enfant->codePostal}</td></tr>";
+			}
+
+			
+			mysqli_close($co);
+		?>
 
 	</table>
 	
