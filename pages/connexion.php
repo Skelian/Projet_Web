@@ -27,12 +27,9 @@ if(!isset($_SESSION['benevole'])) {
                 <a class="nav-link" href="../accueil.php">Accueil </a>
             </li>
 			<li class="nav-item">
-<<<<<<< HEAD
                 <a class="nav-link" href="../pages/course.php">Courses </a>
             </li>
 			<li class="nav-item ">
-=======
->>>>>>> 579754ce59da93f0b83b7b04768364da7baace61
                 <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
             </li>
             <li class="nav-item active">

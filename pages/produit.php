@@ -22,24 +22,21 @@ session_start();
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <?php
-        require_once("../modeles/benevole.php");
-        session_start();
-
         // Si on n'est pas co, on affiche que 3 onglets
         if(!isset($_SESSION['benevole'])) {
             ?>
             <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="../accueil.php">Accueil <span class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Produits</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./pages/produit.php">Produits</a>
+                    <a class="nav-link " href="../pages/utilisateur.php">Utilisateur </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="./pages/utilisateur.php">Utilisateur </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link "  href="./pages/connexion.php">Connexion </a>
+                    <a class="nav-link "  href="../pages/connexion.php">Connexion </a>
                 </li>
             </ul>
 
@@ -47,13 +44,13 @@ session_start();
         }else{
             ?>
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="../accueil.php">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./pages/gouter.php">Goûters</a>
+                    <a class="nav-link" href="../pages/gouter.php">Goûters</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="#">Produits</a>
                 </li>
                 <li class="nav-item">
