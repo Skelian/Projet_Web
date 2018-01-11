@@ -53,6 +53,20 @@ if(!isset($_SESSION['benevole'])) {
 				<label for="mdp">Mot de passe:</label>
 				<br>
 				<input type="password"  name="mdp">
+				<?php
+					if(isset($_GET["errChp"])){
+						if($_GET["errChp"]>=2){
+							echo '<div class="erreur"> Identifiant ou mot de passe incorrect.<br /></div>';
+							$_GET["errChp"]-=2;
+						}
+					}
+					if(isset($_GET["errChp"])){
+						if($_GET["errChp"]>=1){
+							echo '<div class="erreur"> Veuillez saisir votre identifiant et votre mot de passe. </div>';
+							$_GET["errChp"]-=1;
+						}
+					}	
+				?>
 			</p>
 			<button type="submit">Se connecter</button>
 		</form>
