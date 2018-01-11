@@ -62,3 +62,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .erreur{
 	color:red;
 }
+
+.ok{
+	color:green;
+}

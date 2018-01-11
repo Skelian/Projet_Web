@@ -4,6 +4,7 @@
 	
 	$errChp=0;
 	$errForm=0;
+	$sucChp=0;
 	$mailExp="#^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$#";
 	
 	if(empty($_POST["email"])){
@@ -36,6 +37,12 @@
 			
 			$resultat=mysqli_query($co,$requete) or die("erreur de requete");		
 			$benevole->setEmail($email);
+			
+			$sucChp+=128;
+			if($sucChp>0){
+				header('Location: http://localhost/ProjetWeb/pages/connexion.php?&sucChp='.$sucChp);
+				exit();
+			}
 			
 		}
 		mysqli_close($co);

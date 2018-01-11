@@ -3,6 +3,7 @@
 	session_start();
 	
 	$errChp=0;
+	$sucChp=0;
 	
 	if(empty($_POST["identifiant"])){
 		$errChp+=16;
@@ -26,8 +27,14 @@
 			$resultat=mysqli_query($co,$requete) or die("erreur de requete");
 			$benevole->setIdentifiant($identifiant);
 			
+			$sucChp+=256;
+			if($sucChp>0){
+				header('Location: http://localhost/ProjetWeb/pages/connexion.php?&sucChp='.$sucChp);
+				exit();
+			}
+			
 		}
 		mysqli_close($co);
-		header('Location: http://localhost/ProjetWeb/pages/connexion.php');
+		//header('Location: http://localhost/ProjetWeb/pages/connexion.php');
 	}
 ?>

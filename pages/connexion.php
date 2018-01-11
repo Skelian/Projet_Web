@@ -111,6 +111,33 @@ if(!isset($_SESSION['benevole'])) {
 </nav>
 
 <div id="contenue">
+			<?php
+				if(isset($_GET["sucChp"])){
+					if($_GET["sucChp"]>=256){
+						echo '<div class="ok"> Le login a correctement été changé. </div>';
+						$_GET["sucChp"]-=256;
+					}
+				}
+				if(isset($_GET["sucChp"])){
+					if($_GET["sucChp"]>=128){
+						echo '<div class="ok"> L\'adresse mail a correctement été changée. </div>';
+						$_GET["sucChp"]-=128;
+					}
+				}
+				if(isset($_GET["sucChp"])){
+					if($_GET["sucChp"]>=64){
+						echo '<div class="ok"> Le numéro de téléphone a correctement été changé. </div>';
+						$_GET["sucChp"]-=64;
+					}
+				}
+				if(isset($_GET["sucChp"])){
+					if($_GET["sucChp"]>=32){
+						echo '<div class="ok"> Le mot de passe a correctement été changé. </div>';
+						$_GET["sucChp"]-=32;
+					}
+				}
+			?>
+			
             <h1> Mes infos</h1>
 
             <p>Bonjour <?php echo $prenom.' '.$nom; ?></p>

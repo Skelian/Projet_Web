@@ -4,6 +4,7 @@
 	
 	$errChp=0;
 	$errForm=0;
+	$sucChp=0;
 	$telExp="#^[0-9]{10}$#";
 
 	
@@ -37,6 +38,12 @@
 			
 			$resultat=mysqli_query($co,$requete) or die("erreur de requete");		
 			$benevole->setTelephone($telephone);
+			
+			$sucChp+=64;
+			if($sucChp>0){
+				header('Location: http://localhost/ProjetWeb/pages/connexion.php?&sucChp='.$sucChp);
+				exit();
+			}
 			
 		}
 		mysqli_close($co);
