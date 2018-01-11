@@ -22,7 +22,7 @@
         exit();
     }else{
         $idEnf = $_POST["idEnf"];
-        $requete="UPDATE compteenfants SET soldeEnfants=soldeEnfants+$solde WHERE numEnfant=$idEnf";
+		$requete="INSERT INTO transaction(montantTransaction, numEnfant) VALUES ($solde, $idEnf)";
         echo $requete;
         $resultat = mysqli_query($co, $requete) or die("erreur de requete modif enfant");
     }

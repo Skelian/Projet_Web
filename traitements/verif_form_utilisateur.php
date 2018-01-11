@@ -99,5 +99,6 @@
 			echo "<p>Identifiant déjà existant, veuillez recommencer et saisir un autre identifiant !</p>";
 		}
 		mysqli_close($co);
-		header('Location: http://localhost/ProjetWeb/acceuil.php');
+		header('Location: http://localhost/ProjetWeb/accueil.php');
+	}
 ?>
