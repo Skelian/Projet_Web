@@ -46,6 +46,7 @@
         <h1>Enfants</h1>
 		<br />
 		<h3>Liste des enfants inscrits dans l'APERO.</h3>
+		<p>Voici la liste de tous les enfants inscrits dans l'APERO et qui peuvent participer aux goûters.</p>
 		
         <?php
             require_once("../modeles/bd.php");
@@ -93,12 +94,11 @@
                 </div>
                 <?php
                 if(isset($_GET['suc'])){
-                    echo " <p> Produit modifier avec succes! </p>";
+                    echo " <p> Crédit modifié avec succes! </p>";
                 }
                 ?>
                 <p>
-                    <a href="../pages/ajouter_prod.php"><button >Ajouter un produit</button></a>
-                    <a href="../pages/course.php"><button >Enregistrer des courses</button></a>
+                    <a href="../pages/formulaire_enfant.php"><button >Ajouter un enfant</button></a>
                 </p>
     </div>
 </body>

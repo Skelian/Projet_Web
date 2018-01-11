@@ -66,12 +66,12 @@
                 <label for="prenom">Prénom : <?php if(isset($_POST['enf'])) { echo $row['prenomEnfant'];}?></label>
 				<br>
 				
-				<label for="prenom">Solde : <?php if(isset($_POST['enf'])) { echo $soldeEnfants;}?></label>
-				<br>
+				<!--<label for="prenom">Solde : <?php //if(isset($_POST['enf'])) { echo $soldeEnfants;}?></label>
+				<br>-->
                 <label for="solde">Crédit :</label>
                 <input type="number" value="<?php if(isset($_POST['enf'])) { echo $row['soldeEnfants'];}?>" name="solde">
-				<br><label for="prenom">Nouveau solde : <?php if(isset($_POST['enf'])) { echo $soldeEnfants;}?></label>
-				<br>
+				<!--<br><label for="prenom">Nouveau solde : <?php //if(isset($_POST['enf'])) { echo $soldeEnfants;}?></label>
+				<br>-->
 				
 				
             </p>

@@ -146,7 +146,7 @@ session_start();
                 </div>
                 <?php
                 if(isset($_GET['suc'])){
-                    echo " <p> Produit modifier avec succes! </p>";
+                    echo " <p> Produit modifié avec succes! </p>";
                 }
                 ?>
                 <p>
