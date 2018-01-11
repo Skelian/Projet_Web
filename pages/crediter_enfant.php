@@ -48,29 +48,33 @@
         $bd->connexion();
         $co=$bd->getCo();
         if(isset($_POST['enf'])) {
-            $idProd = $_POST["enf"];
-            $requete="SELECT nomEnfant,`prixProduit`,`quantiteProduit` FROM `produit` WHERE `numProduit`='$idEnf'";
-            $resultat=mysqli_query($co,$requete) or die("erreur de requete liste produit");
+            $idEnf = $_POST["enf"];
+            $requete="SELECT numEnfant, nomEnfant, prenomEnfant, soldeEnfants FROM compteenfants WHERE numEnfant='$idEnf'";
+            $resultat=mysqli_query($co,$requete) or die("erreur de requete liste enfant");
             $row=mysqli_fetch_assoc($resultat);
         }
         ?>
-        <h1>Modifier un produit :</h1>
+        <h1>Créditer un enfant :</h1>
 		<br />
-        <form  method="post" action="../traitements/finish_produit.php">
+        <form  method="post" action="../traitements/crediter.php">
             <p>
                 <input type="hidden" name="idEnf" value="<?php echo $idEnf;?>">
-                <label for="nom">Nom :</label>
-                <input type="text" value="<?php if(isset($_POST['enf'])) { echo $row['nomProduit'];}?>" name="nom">
+                <label for="num">Num : <?php if(isset($_POST['enf'])) { echo $row['numEnfant'];}?></label>
 				<br>
-                <label for="prix">Prix unitaire :</label>
-                <input type="number" value="<?php if(isset($_POST['enf'])) { echo $row['prixProduit'];}?>" name="prix">
+                <label for="nom">Nom : <?php if(isset($_POST['enf'])) { echo $row['nomEnfant'];}?></label>
+				<br>
+                <label for="prenom">Prénom : <?php if(isset($_POST['enf'])) { echo $row['prenomEnfant'];}?></label>
+				<br>
+				
+                <label for="solde">Solde :</label>
+                <input type="number" value="<?php if(isset($_POST['enf'])) { echo $row['soldeEnfants'];}?>" name="solde">
             </p>
-            <button type="submit">Modifier le produit</button>
+            <button type="submit">Créditer</button>
         </form>
         <div>
             <br>
-            <a href="../pages/produit.php">
-                <button>Retour en arrière</button>
+            <a href="../pages/enfant.php">
+                <button>Retour</button>
             </a>
         </div>
     </div>
