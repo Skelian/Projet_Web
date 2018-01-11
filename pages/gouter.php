@@ -65,7 +65,7 @@ session_start();
             ?>
 
 
-            <form method="post" action=" ../traitements/gouter_recap.php" style="height: 100%;">
+                <form method="post" action=" ../traitements/gouter_recap.php" style="height: 100%;">
 
                 <div id="form_gouter">
                     <div id="liste_Enfant">

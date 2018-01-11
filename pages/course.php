@@ -46,7 +46,40 @@
 
 <div id="contenue">
     <h1>Courses</h1>
+    <?php
+        require_once("../modeles/bd.php");
+        $bd = new Bd();
+        $bd->connexion();
+        $co = $bd->getCo();
 
+        $requete="SELECT `dateCourse`,`montantCourse` FROM `course`";
+        $resultatCourse = mysqli_query($co, $requete) or die("erreur de requete liste produit");
+
+    ?>
+    <div id="form_gouter">
+        <div id="liste_course">
+
+            <table class="table table-striped">
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Montant</th>
+                </tr>
+                <?php
+                while ($row = mysqli_fetch_assoc($resultatCourse)){
+                    ?>
+                    <tr>
+                        <td><?php echo $row["dateCourse"]?></td>
+                        <td><?php echo $row["montantCourse"]?></td>
+                    </tr>
+                    <?php
+                }
+                ?>
+            </table>
+        </div>
+        <form>
+            <button type="submit">Enregistrer de nouvelle course</button>
+        </form>
+    </div>
 
 </div>
 </body>

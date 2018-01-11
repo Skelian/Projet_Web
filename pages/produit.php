@@ -110,7 +110,7 @@ session_start();
                 $requete = "SELECT `numProduit`,`nomProduit`,`prixProduit`,`quantiteProduit` FROM `produit` ";
                 $resultatProduit = mysqli_query($co, $requete) or die("erreur de requete liste produit");
             ?>
-                <div style="height: 75%">
+                <div style="height: 70%">
                     <form method="post" action=" ../pages/modif_produit.php" style="height: 100%;">
                     <!--<label for="listeProduit">Liste des Produits</label>-->
                     <div  class="table-responsive-md table_prod">
